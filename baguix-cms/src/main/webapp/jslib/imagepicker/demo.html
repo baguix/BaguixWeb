@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="JS代码,图片列表,显示切换,jQuery特效" />
+<meta name="description" content="jQuery实现的图片列表显示切换效果，更多图片列表,显示切换,jQuery特效请访问脚本分享网JS代码频道。" />
+<title>jQuery实现的图片列表显示切换效果</title>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="imagepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="imagepicker.css">
+<script type="text/javascript">
+var title = "Cute Kitten 1,Cute Kitten 2,Cute Kitten 3";
+var source = "http://placekitten.com/300/200,http://placekitten.com/150/200,http://placekitten.com/400/200";
+$(document).ready(function(){
+function genHTML(title,src){
+  var t = title.split(",");
+  var s = src.split(",");
+  html = "<select id ='selectpic' class='image-picker show-html'><option value=''></option>";
+  for(i=0;i<t.length;i++){
+	 html += "<option data-img-src='"+s[i]+"' value='"+s[i]+"'>"+t[i]+"</option>";
+  }
+  html += "</select>";
+  return html;
+}
+$("#c").html(
+    genHTML(title,source)
+);
+ $("#selectpic").imagepicker({
+          hide_select : true,
+          show_label  : true
+        })
+});
+
+function cv(){
+     alert($("#selectpic").val());
+}
+
+</script>
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<div id="c"></div>
+<input type="button" onclick="javascript:cv();" value="查看值"/ >
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿@charset "utf-8";
+
+* {
+	font-size: 12px;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+	color: #003366;
+}
+
+label {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+ul{
+	margin:0;
+	padding:0; 
+	list-style-type:none;
+}
+
+fieldset{
+	margin-top: 10px;
+}
+fieldset>legend{
+	color:#666;
+}
+img {
+	vertical-align: middle;
+}
+
+/**
+EasyUI优化
+*/
+.tabs-tool{
+	border-top:0px;
+	border-right:0px;
+}
+
+.panel-header {
+	background-color: #FFFFFF;
+	background: -webkit-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+	background: -moz-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+	background: -o-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+	background: linear-gradient(to bottom,#FFFFFF 0,#E0ECFF 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#E0ECFF,GradientType=0);
+}
+
+/**
+  Baguix系统专用
+*/
+.formlabel {
+	text-align:right;
+	line-height: 30px;
+	height:30px;
+	width:120px;
+	display:block;
+}
+
+.tips {
+	margin-top:2px;
+	margin-bottom:5px;
+	font-size: 12px;
+	color:#666;
+}
+
+
+input [type=text]{
+	height:20px;
+	line-height:20px;
+	border: #95b8e7 1px solid;
+	vertical-align:middle;
+}
+
+.fontred {
+	color: #ff0000;
+}
+
+.cls {
+	clear: both;
+}
+
+.mybtn-sep {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #FFFFFF;
+    float:left;
+    height: 24px;
+    margin: 2px 1px;
+}
+
+.mypannel-toolbar{
+    border-color: #DDDDDD;
+    background: none repeat scroll 0 0 #F4F4F4;
+    border-style: solid;
+    border-width: 0 0 1px;
+    height: auto;
+    padding: 1px 0px;
+}
+
+.height5{
+	height:5px;
+	display:block;
+}
+.height10{
+	height:10px;
+	display:block;
+}
+.height15{
+	height:15px;
+	display:block;
+}
+.height20{
+	height:20px;
+	display:block;
+}
+.height25{
+	height:25px;
+	display:block;
+}
+.redfont {
+	color: red;
+}
+#main_navmenu {
+	height:30px;background:url(../../images/manctrl/main/navbg.png) #BCDFF3;
+}

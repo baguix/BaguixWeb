@@ -1,0 +1,541 @@
+[DEBUG][2015-10-19 13:21:02,147][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-19 13:21:02,147][缓存加载] overview缓存成功！
+[DEBUG][2015-10-19 13:21:02,161][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-19 13:21:02,161][缓存加载] siteinfo缓存成功！
+[INFO][2015-10-19 13:23:47,674][系统消息] 销毁操作开始：
+[INFO][2015-10-19 13:23:47,677][系统消息] ...
+[INFO][2015-10-19 13:23:47,678][系统消息] 销毁操作结束！
+[DEBUG][2015-10-19 13:25:35,024][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-19 13:25:35,025][缓存加载] overview缓存成功！
+[DEBUG][2015-10-19 13:25:35,035][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-19 13:25:35,036][缓存加载] siteinfo缓存成功！
+[INFO][2015-10-19 13:27:00,819][系统消息] 销毁操作开始：
+[INFO][2015-10-19 13:27:00,821][系统消息] ...
+[INFO][2015-10-19 13:27:00,823][系统消息] 销毁操作结束！
+[DEBUG][2015-10-19 13:29:05,063][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-19 13:29:05,063][缓存加载] overview缓存成功！
+[DEBUG][2015-10-19 13:29:05,075][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-19 13:29:05,075][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-19 13:29:26,604][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=4xg2
+[INFO][2015-10-19 13:29:27,153][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 13:29:34,433][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:29:41,241][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-19 13:29:50,728][com.baguix.web.action.manctrl.SiteConfigAct] 系统重新缓存了imageinfo数据。
+[DEBUG][2015-10-19 13:29:52,809][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-19 13:29:57,373][com.baguix.web.action.manctrl.SiteConfigAct] 系统重新缓存了imageinfo数据。
+[DEBUG][2015-10-19 13:30:00,002][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:30:00
+[DEBUG][2015-10-19 13:30:17,558][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:30:18,955][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:30:37,749][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:30:42,898][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:33:46,203][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:33:47,737][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[INFO][2015-10-19 13:33:54,249][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 13:34:04,052][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:34:11,555][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:35:00,013][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:35:00
+[INFO][2015-10-19 13:37:31,904][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 13:37:39,894][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:37:45,516][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:37:45,553][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:37:45,849][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:40:00,046][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:40:00
+[DEBUG][2015-10-19 13:41:17,508][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:41:26,958][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:43:21,626][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:43:24,980][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:43:41,851][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:44:29,569][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:45:00,000][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:44:59
+[DEBUG][2015-10-19 13:46:49,643][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:46:56,872][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:46:56,919][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:46:56,937][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:48:00,115][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:48:01,406][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:48:05,168][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:48:05,237][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:49:41,226][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:49:41,286][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:50:00,000][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:50:00
+[DEBUG][2015-10-19 13:55:00,000][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 13:55:00
+[DEBUG][2015-10-19 13:57:34,661][com.baguix.web.action.manctrl.AdminMainAct] post= code=6xe3
+[INFO][2015-10-19 13:57:34,711][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 13:57:39,578][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:57:40,497][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 13:57:40,502][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:57:40,602][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 13:57:49,155][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 13:57:49,190][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 14:00:00,032][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:00:00
+[DEBUG][2015-10-19 14:05:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:05:00
+[DEBUG][2015-10-19 14:10:00,016][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:10:00
+[DEBUG][2015-10-19 14:15:00,021][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:15:00
+[DEBUG][2015-10-19 14:20:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:20:00
+[DEBUG][2015-10-19 14:24:30,217][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 14:24:31,330][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 14:24:31,352][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 14:24:31,388][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 14:25:00,016][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:25:00
+[DEBUG][2015-10-19 14:30:00,000][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 14:30:00
+[INFO][2015-10-19 14:31:04,133][系统消息] 销毁操作开始：
+[INFO][2015-10-19 14:31:04,133][系统消息] ...
+[INFO][2015-10-19 14:31:04,133][系统消息] 销毁操作结束！
+[DEBUG][2015-10-19 16:16:06,930][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-19 16:16:06,950][缓存加载] overview缓存成功！
+[DEBUG][2015-10-19 16:16:06,968][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-19 16:16:06,969][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-19 16:16:36,247][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=6d3f
+[INFO][2015-10-19 16:16:37,239][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 16:16:49,969][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:16:51,922][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:16:51,967][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:16:52,064][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:17:07,049][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:17:07,929][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:17:07,942][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:17:07,954][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:18:14,467][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:18:14,532][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:18:14,667][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:18:15,354][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:18:15,516][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:18:15,569][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[INFO][2015-10-19 16:18:43,190][系统消息] 销毁操作开始：
+[INFO][2015-10-19 16:18:43,190][系统消息] ...
+[INFO][2015-10-19 16:18:43,190][系统消息] 销毁操作结束！
+[DEBUG][2015-10-19 16:21:07,975][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-19 16:21:07,976][缓存加载] overview缓存成功！
+[DEBUG][2015-10-19 16:21:08,008][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-19 16:21:08,009][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-19 16:21:34,902][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:21:34,940][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:21:35,634][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:21:36,291][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:21:36,374][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:21:36,425][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:05,161][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:05,321][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:05,637][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:25,472][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:25,482][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:25,490][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:54,935][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:54,942][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:22:54,943][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:23:18,166][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:23:18,183][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:23:18,185][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:01,261][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:01,290][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:01,291][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:17,805][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=gdp5
+[INFO][2015-10-19 16:24:18,612][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-19 16:24:25,657][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:24:26,483][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:26,528][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:24:26,514][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:24:26,658][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:26,686][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:26,687][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:42,978][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:42,996][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:43,015][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:49,471][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:24:50,697][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:24:51,681][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:24:51,685][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:52,083][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:52,135][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:52,137][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:52,154][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:24:55,481][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:24:55,539][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:25:00,002][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:25:00
+[DEBUG][2015-10-19 16:30:00,000][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:30:00
+[DEBUG][2015-10-19 16:31:13,483][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:31:13,586][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:31:19,593][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:31:20,671][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:31:20,686][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-10-19 16:31:20,786][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-19 16:31:21,108][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:31:21,117][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:31:21,121][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-10-19 16:35:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:35:00
+[DEBUG][2015-10-19 16:40:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:40:00
+[DEBUG][2015-10-19 16:45:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:45:00
+[DEBUG][2015-10-19 16:50:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:50:00
+[DEBUG][2015-10-19 16:55:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 16:55:00
+[DEBUG][2015-10-19 17:00:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 17:00:00
+[DEBUG][2015-10-19 17:05:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 17:05:00
+[DEBUG][2015-10-19 17:10:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 17:10:00
+[DEBUG][2015-10-19 17:15:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-19 17:15:00
+[INFO][2015-10-19 17:17:09,400][系统消息] 销毁操作开始：
+[INFO][2015-10-19 17:17:09,402][系统消息] ...
+[INFO][2015-10-19 17:17:09,404][系统消息] 销毁操作结束！
+[DEBUG][2015-10-25 11:00:27,057][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-25 11:00:27,069][缓存加载] overview缓存成功！
+[DEBUG][2015-10-25 11:00:27,079][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-25 11:00:27,079][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-25 11:05:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:05:00
+[DEBUG][2015-10-25 11:10:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:10:00
+[DEBUG][2015-10-25 11:15:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:15:00
+[DEBUG][2015-10-25 11:20:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:20:00
+[DEBUG][2015-10-25 11:25:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:25:00
+[DEBUG][2015-10-25 11:30:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:30:00
+[DEBUG][2015-10-25 11:35:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:35:00
+[DEBUG][2015-10-25 11:40:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:40:00
+[DEBUG][2015-10-25 11:45:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:45:00
+[DEBUG][2015-10-25 11:50:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:50:00
+[DEBUG][2015-10-25 11:55:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 11:55:00
+[DEBUG][2015-10-25 12:00:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:00:00
+[DEBUG][2015-10-25 12:05:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:05:00
+[DEBUG][2015-10-25 12:10:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:10:00
+[DEBUG][2015-10-25 12:15:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:15:00
+[DEBUG][2015-10-25 12:20:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:20:00
+[DEBUG][2015-10-25 12:25:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:25:00
+[DEBUG][2015-10-25 12:30:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:30:00
+[DEBUG][2015-10-25 12:35:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:35:00
+[DEBUG][2015-10-25 12:40:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:40:00
+[DEBUG][2015-10-25 12:45:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:45:00
+[DEBUG][2015-10-25 12:50:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:50:00
+[DEBUG][2015-10-25 12:55:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 12:55:00
+[DEBUG][2015-10-25 13:00:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:00:00
+[DEBUG][2015-10-25 13:05:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:05:00
+[DEBUG][2015-10-25 13:10:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:10:00
+[DEBUG][2015-10-25 13:15:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:15:00
+[DEBUG][2015-10-25 13:20:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:20:00
+[DEBUG][2015-10-25 13:25:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:25:00
+[DEBUG][2015-10-25 13:30:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:30:00
+[DEBUG][2015-10-25 13:35:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:35:00
+[DEBUG][2015-10-25 13:40:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:40:00
+[DEBUG][2015-10-25 13:45:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:45:00
+[DEBUG][2015-10-25 13:50:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 13:50:00
+[DEBUG][2015-10-25 17:57:45,095][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-25 17:57:45,095][缓存加载] overview缓存成功！
+[DEBUG][2015-10-25 17:57:45,106][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-25 17:57:45,106][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-25 17:58:20,940][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=na8n
+[INFO][2015-10-25 17:58:21,377][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-25 17:58:31,211][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-25 18:00:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:00:00
+[DEBUG][2015-10-25 18:05:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:05:00
+[DEBUG][2015-10-25 18:10:17,671][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:10:17
+[DEBUG][2015-10-25 18:15:22,030][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:15:22
+[DEBUG][2015-10-25 18:20:00,067][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:20:00
+[DEBUG][2015-10-25 18:25:00,122][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:25:00
+[INFO][2015-10-25 18:26:16,897][系统消息] 销毁操作开始：
+[INFO][2015-10-25 18:26:16,897][系统消息] ...
+[INFO][2015-10-25 18:26:16,897][系统消息] 销毁操作结束！
+[DEBUG][2015-10-25 18:28:22,448][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-25 18:28:22,448][缓存加载] overview缓存成功！
+[DEBUG][2015-10-25 18:28:22,465][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-25 18:28:22,465][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-25 18:30:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:30:00
+[DEBUG][2015-10-25 18:35:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:35:00
+[DEBUG][2015-10-25 18:40:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:40:00
+[DEBUG][2015-10-25 18:45:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:45:00
+[DEBUG][2015-10-25 18:50:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:50:00
+[DEBUG][2015-10-25 18:55:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 18:55:00
+[DEBUG][2015-10-25 19:00:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:00:00
+[DEBUG][2015-10-25 19:05:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:05:00
+[DEBUG][2015-10-25 19:10:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:10:00
+[DEBUG][2015-10-25 19:15:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:15:00
+[DEBUG][2015-10-25 19:20:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:20:00
+[INFO][2015-10-25 19:24:00,827][系统消息] 销毁操作开始：
+[INFO][2015-10-25 19:24:00,827][系统消息] ...
+[INFO][2015-10-25 19:24:00,828][系统消息] 销毁操作结束！
+[DEBUG][2015-10-25 19:28:06,092][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-25 19:28:06,155][缓存加载] overview缓存成功！
+[DEBUG][2015-10-25 19:28:06,199][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-25 19:28:06,200][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-25 19:34:26,390][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:34:26
+[DEBUG][2015-10-25 19:35:00,001][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:35:00
+[DEBUG][2015-10-25 19:40:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:40:00
+[DEBUG][2015-10-25 19:45:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:45:00
+[DEBUG][2015-10-25 19:50:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:50:00
+[DEBUG][2015-10-25 19:55:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 19:55:00
+[DEBUG][2015-10-25 20:00:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:00:00
+[DEBUG][2015-10-25 20:05:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:05:00
+[DEBUG][2015-10-25 20:10:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:10:00
+[DEBUG][2015-10-25 20:15:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:15:00
+[DEBUG][2015-10-25 20:20:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:20:00
+[DEBUG][2015-10-25 20:25:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:25:00
+[DEBUG][2015-10-25 20:30:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:30:00
+[DEBUG][2015-10-25 20:35:00,033][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:35:00
+[DEBUG][2015-10-25 20:40:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:40:00
+[DEBUG][2015-10-25 20:45:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:45:00
+[DEBUG][2015-10-25 20:50:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:50:00
+[DEBUG][2015-10-25 20:55:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 20:55:00
+[DEBUG][2015-10-25 21:00:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:00:00
+[DEBUG][2015-10-25 21:05:00,038][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:05:00
+[DEBUG][2015-10-25 21:10:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:10:00
+[DEBUG][2015-10-25 21:15:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:15:00
+[DEBUG][2015-10-25 21:20:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:20:00
+[DEBUG][2015-10-25 21:25:00,016][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:25:00
+[DEBUG][2015-10-25 21:30:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:30:00
+[DEBUG][2015-10-25 21:35:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:35:00
+[DEBUG][2015-10-25 21:40:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:40:00
+[DEBUG][2015-10-25 21:45:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:45:00
+[DEBUG][2015-10-25 21:50:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:50:00
+[DEBUG][2015-10-25 21:55:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 21:55:00
+[DEBUG][2015-10-25 22:00:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:00:00
+[DEBUG][2015-10-25 22:05:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:05:00
+[DEBUG][2015-10-25 22:10:00,047][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:10:00
+[DEBUG][2015-10-25 22:15:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:15:00
+[DEBUG][2015-10-25 22:20:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:20:00
+[DEBUG][2015-10-25 22:25:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-25 22:25:00
+[INFO][2015-10-25 22:27:23,027][系统消息] 销毁操作开始：
+[INFO][2015-10-25 22:27:23,027][系统消息] ...
+[INFO][2015-10-25 22:27:23,028][系统消息] 销毁操作结束！
+[DEBUG][2015-10-31 21:28:24,852][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-31 21:28:24,852][缓存加载] overview缓存成功！
+[DEBUG][2015-10-31 21:28:24,875][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-31 21:28:24,876][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-31 21:30:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 21:30:00
+[DEBUG][2015-10-31 21:34:38,494][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=ax2y
+[INFO][2015-10-31 21:34:39,552][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-31 21:35:00,148][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 21:35:00
+[DEBUG][2015-10-31 21:36:27,087][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-31 21:36:33,846][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:37:25,479][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[INFO][2015-10-31 21:37:34,416][系统消息] 销毁操作开始：
+[INFO][2015-10-31 21:37:34,416][系统消息] ...
+[INFO][2015-10-31 21:37:34,416][系统消息] 销毁操作结束！
+[DEBUG][2015-10-31 21:40:27,145][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-10-31 21:40:27,164][缓存加载] overview缓存成功！
+[DEBUG][2015-10-31 21:40:27,183][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-10-31 21:40:27,184][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-10-31 21:42:07,280][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=m5ec
+[INFO][2015-10-31 21:42:08,063][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-31 21:45:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 21:45:00
+[DEBUG][2015-10-31 21:45:47,274][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-31 21:45:48,627][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:47:39,541][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:48:19,585][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:48:54,900][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:50:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 21:50:00
+[DEBUG][2015-10-31 21:50:23,549][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 21:55:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 21:55:00
+[INFO][2015-10-31 21:58:35,698][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-31 21:58:49,013][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-31 21:58:49,948][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 22:00:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:00:00
+[DEBUG][2015-10-31 22:05:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:05:00
+[DEBUG][2015-10-31 22:10:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:10:00
+[DEBUG][2015-10-31 22:12:29,200][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 22:15:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:15:00
+[DEBUG][2015-10-31 22:20:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:20:00
+[DEBUG][2015-10-31 22:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:25:00
+[DEBUG][2015-10-31 22:30:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:30:00
+[DEBUG][2015-10-31 22:35:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:35:00
+[INFO][2015-10-31 22:39:59,469][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-10-31 22:40:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:40:00
+[DEBUG][2015-10-31 22:40:26,208][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-10-31 22:42:09,848][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 22:45:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:45:00
+[DEBUG][2015-10-31 22:50:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:50:00
+[DEBUG][2015-10-31 22:55:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 22:55:00
+[DEBUG][2015-10-31 23:00:00,042][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:00:00
+[DEBUG][2015-10-31 23:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:05:00
+[DEBUG][2015-10-31 23:10:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:10:00
+[DEBUG][2015-10-31 23:13:30,125][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 23:15:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:15:00
+[DEBUG][2015-10-31 23:20:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:20:00
+[DEBUG][2015-10-31 23:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:25:00
+[DEBUG][2015-10-31 23:30:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:30:00
+[DEBUG][2015-10-31 23:31:15,955][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-10-31 23:35:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:35:00
+[DEBUG][2015-10-31 23:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:40:00
+[DEBUG][2015-10-31 23:45:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:45:00
+[DEBUG][2015-10-31 23:50:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:50:00
+[DEBUG][2015-10-31 23:55:00,041][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-10-31 23:55:00
+[DEBUG][2015-11-01 00:00:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:00:00
+[DEBUG][2015-11-01 00:05:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:05:00
+[DEBUG][2015-11-01 00:10:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:10:00
+[DEBUG][2015-11-01 00:15:00,013][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:15:00
+[DEBUG][2015-11-01 00:20:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:20:00
+[DEBUG][2015-11-01 00:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:25:00
+[DEBUG][2015-11-01 00:30:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:30:00
+[DEBUG][2015-11-01 00:35:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:35:00
+[DEBUG][2015-11-01 00:40:00,044][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 00:40:00
+[INFO][2015-11-01 00:40:57,798][系统消息] 销毁操作开始：
+[INFO][2015-11-01 00:40:57,798][系统消息] ...
+[INFO][2015-11-01 00:40:57,798][系统消息] 销毁操作结束！
+[INFO][2015-11-01 09:16:23,538][系统消息] 销毁操作开始：
+[INFO][2015-11-01 09:16:23,550][系统消息] ...
+[INFO][2015-11-01 09:16:23,550][系统消息] 销毁操作结束！
+[DEBUG][2015-11-01 09:49:02,555][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-11-01 09:49:02,589][缓存加载] overview缓存成功！
+[DEBUG][2015-11-01 09:49:02,623][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-11-01 09:49:02,624][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-11-01 09:50:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 09:50:00
+[DEBUG][2015-11-01 09:55:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 09:55:00
+[DEBUG][2015-11-01 10:00:00,013][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:00:00
+[DEBUG][2015-11-01 10:05:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:05:00
+[DEBUG][2015-11-01 10:10:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:10:00
+[DEBUG][2015-11-01 10:15:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:15:00
+[DEBUG][2015-11-01 10:20:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:20:00
+[DEBUG][2015-11-01 10:25:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:25:00
+[DEBUG][2015-11-01 10:30:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:30:00
+[DEBUG][2015-11-01 10:35:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:35:00
+[DEBUG][2015-11-01 10:37:23,293][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=c2cw
+[INFO][2015-11-01 10:37:24,094][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-11-01 10:37:35,178][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 10:37:39,449][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 10:40:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:40:00
+[DEBUG][2015-11-01 10:45:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:45:00
+[DEBUG][2015-11-01 10:50:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:50:00
+[DEBUG][2015-11-01 10:55:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 10:55:00
+[DEBUG][2015-11-01 11:00:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:00:00
+[DEBUG][2015-11-01 11:05:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:05:00
+[DEBUG][2015-11-01 11:10:00,038][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:10:00
+[DEBUG][2015-11-01 11:13:11,438][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=5ndn
+[INFO][2015-11-01 11:13:11,595][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-11-01 11:13:17,313][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 11:13:20,397][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 11:15:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:15:00
+[DEBUG][2015-11-01 11:17:25,062][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 11:20:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:20:00
+[DEBUG][2015-11-01 11:25:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:25:00
+[DEBUG][2015-11-01 11:30:00,128][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:30:00
+[DEBUG][2015-11-01 11:35:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:35:00
+[DEBUG][2015-11-01 11:40:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:40:00
+[DEBUG][2015-11-01 11:45:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:45:00
+[DEBUG][2015-11-01 11:50:00,047][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:50:00
+[DEBUG][2015-11-01 11:55:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 11:55:00
+[DEBUG][2015-11-01 12:00:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:00:00
+[DEBUG][2015-11-01 12:05:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:05:00
+[DEBUG][2015-11-01 12:10:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:10:00
+[DEBUG][2015-11-01 12:15:00,025][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:15:00
+[DEBUG][2015-11-01 12:20:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:20:00
+[DEBUG][2015-11-01 12:25:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:25:00
+[DEBUG][2015-11-01 12:30:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:30:00
+[DEBUG][2015-11-01 12:35:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:35:00
+[DEBUG][2015-11-01 12:40:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:40:00
+[DEBUG][2015-11-01 12:45:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:45:00
+[DEBUG][2015-11-01 12:50:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:50:00
+[DEBUG][2015-11-01 12:55:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 12:55:00
+[DEBUG][2015-11-01 13:00:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:00:00
+[DEBUG][2015-11-01 13:05:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:05:00
+[DEBUG][2015-11-01 13:10:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:10:00
+[DEBUG][2015-11-01 13:15:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:15:00
+[DEBUG][2015-11-01 13:20:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:20:00
+[DEBUG][2015-11-01 13:25:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:25:00
+[DEBUG][2015-11-01 13:30:00,040][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:30:00
+[DEBUG][2015-11-01 13:35:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:35:00
+[DEBUG][2015-11-01 13:40:00,013][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:40:00
+[DEBUG][2015-11-01 13:44:31,871][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 13:44:38,101][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 13:44:47,101][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-11-01 13:44:47,676][com.baguix.web.action.cms.CategoryAct] 文章栏目
+[DEBUG][2015-11-01 13:44:48,722][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:44:48,758][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:44:52,155][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:44:52,155][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:44:58,088][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 13:44:58,151][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 13:44:59,020][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:44:59,020][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:45:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:45:00
+[DEBUG][2015-11-01 13:45:00,746][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:45:00,784][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:50:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:50:00
+[DEBUG][2015-11-01 13:53:13,900][com.baguix.web.common.db.DataSourceAspect] 2使用数据源：master
+[DEBUG][2015-11-01 13:53:14,117][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 13:55:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 13:55:00
+[DEBUG][2015-11-01 14:00:00,012][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 14:00:00
+[DEBUG][2015-11-01 14:05:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 14:05:00
+[DEBUG][2015-11-01 14:10:00,013][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 14:10:00
+[INFO][2015-11-01 14:12:16,960][系统消息] 销毁操作开始：
+[INFO][2015-11-01 14:12:16,960][系统消息] ...
+[INFO][2015-11-01 14:12:16,960][系统消息] 销毁操作结束！
+[DEBUG][2015-11-01 16:10:21,614][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-11-01 16:10:21,614][缓存加载] overview缓存成功！
+[DEBUG][2015-11-01 16:10:21,627][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-11-01 16:10:21,627][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-11-01 16:11:21,199][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=4ceg
+[INFO][2015-11-01 16:11:22,719][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-11-01 16:15:00,020][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:15:00
+[DEBUG][2015-11-01 16:16:38,776][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 16:16:41,423][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 16:17:05,307][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 16:18:12,113][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 16:20:00,106][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:20:00
+[DEBUG][2015-11-01 16:25:00,097][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:25:00
+[DEBUG][2015-11-01 16:30:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:30:00
+[DEBUG][2015-11-01 16:35:00,050][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:35:00
+[DEBUG][2015-11-01 16:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:40:00
+[DEBUG][2015-11-01 16:45:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:45:00
+[DEBUG][2015-11-01 16:50:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:50:00
+[DEBUG][2015-11-01 16:55:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 16:55:00
+[DEBUG][2015-11-01 17:00:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:00:00
+[DEBUG][2015-11-01 17:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:05:00
+[DEBUG][2015-11-01 17:10:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:10:00
+[DEBUG][2015-11-01 17:15:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:15:00
+[DEBUG][2015-11-01 17:20:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:20:00
+[DEBUG][2015-11-01 17:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:25:00
+[DEBUG][2015-11-01 17:30:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:30:00
+[DEBUG][2015-11-01 17:35:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:35:00
+[DEBUG][2015-11-01 17:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:40:00
+[DEBUG][2015-11-01 17:45:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:45:00
+[DEBUG][2015-11-01 17:50:00,050][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:50:00
+[DEBUG][2015-11-01 17:55:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 17:55:00
+[DEBUG][2015-11-01 18:00:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:00:00
+[DEBUG][2015-11-01 18:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:05:00
+[DEBUG][2015-11-01 18:10:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:10:00
+[DEBUG][2015-11-01 18:15:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:15:00
+[DEBUG][2015-11-01 18:20:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:20:00
+[DEBUG][2015-11-01 18:25:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:25:00
+[DEBUG][2015-11-01 18:30:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:30:00
+[DEBUG][2015-11-01 18:35:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:35:00
+[DEBUG][2015-11-01 18:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:40:00
+[DEBUG][2015-11-01 18:45:00,056][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:45:00
+[DEBUG][2015-11-01 18:50:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:50:00
+[DEBUG][2015-11-01 18:55:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 18:55:00
+[DEBUG][2015-11-01 19:00:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:00:00
+[DEBUG][2015-11-01 19:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:05:00
+[DEBUG][2015-11-01 19:10:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:10:00
+[DEBUG][2015-11-01 19:15:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:15:00
+[DEBUG][2015-11-01 19:20:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:20:00
+[DEBUG][2015-11-01 19:25:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:25:00
+[DEBUG][2015-11-01 19:30:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:30:00
+[DEBUG][2015-11-01 19:35:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:35:00
+[DEBUG][2015-11-01 19:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:40:00
+[DEBUG][2015-11-01 19:45:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:45:00
+[DEBUG][2015-11-01 19:50:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:50:00
+[DEBUG][2015-11-01 19:55:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 19:55:00
+[DEBUG][2015-11-01 20:00:00,011][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:00:00
+[DEBUG][2015-11-01 20:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:05:00
+[DEBUG][2015-11-01 20:10:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:10:00
+[DEBUG][2015-11-01 20:15:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:15:00
+[DEBUG][2015-11-01 20:20:00,059][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:20:00
+[DEBUG][2015-11-01 20:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:25:00
+[DEBUG][2015-11-01 20:30:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:30:00
+[DEBUG][2015-11-01 20:35:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:35:00
+[DEBUG][2015-11-01 20:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:40:00
+[DEBUG][2015-11-01 20:45:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:45:00
+[DEBUG][2015-11-01 20:50:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:50:00
+[DEBUG][2015-11-01 20:55:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 20:55:00
+[DEBUG][2015-11-01 21:00:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:00:00
+[DEBUG][2015-11-01 21:05:00,051][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:05:00
+[DEBUG][2015-11-01 21:10:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:10:00
+[DEBUG][2015-11-01 21:15:00,057][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:15:00
+[DEBUG][2015-11-01 21:20:00,022][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:20:00
+[DEBUG][2015-11-01 21:25:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:25:00
+[DEBUG][2015-11-01 21:27:21,772][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=pyfn
+[INFO][2015-11-01 21:27:22,178][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-11-01 21:27:29,490][com.baguix.web.common.db.DataSourceAspect] 1使用数据源：slave
+[DEBUG][2015-11-01 21:27:38,927][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2015-11-01 21:30:00,019][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:30:00
+[DEBUG][2015-11-01 21:35:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:35:00
+[DEBUG][2015-11-01 21:40:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:40:00
+[DEBUG][2015-11-01 21:45:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:45:00
+[DEBUG][2015-11-01 21:50:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:50:00
+[DEBUG][2015-11-01 21:55:00,010][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 21:55:00
+[DEBUG][2015-11-01 22:00:02,535][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 22:00:00
+[DEBUG][2015-11-01 22:05:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-11-01 22:05:00
+[INFO][2015-11-01 22:09:34,213][系统消息] 销毁操作开始：
+[INFO][2015-11-01 22:09:34,213][系统消息] ...
+[INFO][2015-11-01 22:09:34,213][系统消息] 销毁操作结束！

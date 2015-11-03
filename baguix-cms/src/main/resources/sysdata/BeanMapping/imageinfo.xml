@@ -1,0 +1,19 @@
+<imageinfo>
+  <cutPic><![CDATA[false]]></cutPic>
+  <picWidth>600</picWidth>
+  <picHeight>400</picHeight>
+  <border><![CDATA[false]]></border>
+  <borderSize>3</borderSize>
+  <borderColor><![CDATA[#000000]]></borderColor>
+  <thumbPic><![CDATA[false]]></thumbPic>
+  <thumbWidth>150</thumbWidth>
+  <thumbHeight>100</thumbHeight>
+  <watermark>0</watermark>
+  <watermarkPosition><![CDATA[southeast]]></watermarkPosition>
+  <markText><![CDATA[www.baguix.com]]></markText>
+  <markTextColor><![CDATA[#ff0000]]></markTextColor>
+  <markTextSize>24</markTextSize>
+  <markImg><![CDATA[/upfile/sys/logo.png]]></markImg>
+  <markImgStr><![CDATA[/upfile/sys/logo.png]]></markImgStr>
+  <markImgAlpha>25</markImgAlpha>
+</imageinfo>

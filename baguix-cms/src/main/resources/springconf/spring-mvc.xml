@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+">
+       <!-- 自动扫描 Action -->
+       <context:component-scan base-package="com.baguix.web.action" />
+
+       <!-- springMVC annotation(解决中文乱码问题) -->
+       <mvc:annotation-driven ignoreDefaultModelOnRedirect="true">
+              <mvc:message-converters>
+                     <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                            <property name="supportedMediaTypes">
+                                   <list>
+                                          <value>text/plain;charset=UTF-8</value>
+                                          <value>text/html;charset=UTF-8</value>
+                                   </list>
+                            </property>
+                     </bean>
+              </mvc:message-converters>
+       </mvc:annotation-driven>
+
+       <!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理 -->
+       <mvc:resources mapping="/images/**" location="/images/" cache-period="3600"/>
+       <mvc:resources mapping="/js/**" location="/js/" cache-period="3600"/>
+       <mvc:resources mapping="/jslib/**" location="/jslib/" cache-period="3600"/>
+       <mvc:resources mapping="/ueditor/jsp/upload/image/**" location="/ueditor/jsp/upload/image/" cache-period="3600"/>
+       <mvc:resources mapping="/css/**" location="/css/" cache-period="3600"/>
+       <mvc:resources mapping="/fonts/**" location="/fonts/" cache-period="3600"/>
+       <mvc:resources mapping="/favicon.ico" location="/favicon.ico" cache-period="3600"/>
+
+       <!-- 视图解析器ViewResolver -->
+       <bean id="ViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+              <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+              <property name="prefix" value="/WEB-INF/jsp/"/>
+              <property name="suffix" value=".jsp"/>
+       </bean>
+
+       <!-- 上传解析器 -->
+       <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+              <property name="defaultEncoding" value="UTF-8"></property>
+              <property name="maxInMemorySize" value="4096"></property>
+              <property name="maxUploadSize" value="5242880"></property>
+       </bean>
+
+       <!-- 验证码 -->
+       <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+              <property name="config">
+                     <bean class="com.google.code.kaptcha.util.Config">
+                            <constructor-arg>
+                                   <props>
+                                          <prop key="kaptcha.border">yes</prop>
+                                          <prop key="kaptcha.border.color">105,179,90</prop>
+                                          <prop key="kaptcha.textproducer.font.color">blue</prop>
+                                          <prop key="kaptcha.image.width">250</prop>
+                                          <prop key="kaptcha.textproducer.font.size">90</prop>
+                                          <prop key="kaptcha.image.height">90</prop>
+                                          <prop key="kaptcha.session.key">baguix</prop>
+                                          <prop key="kaptcha.textproducer.char.length">4</prop>
+                                          <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                                          <prop key="kaptcha.textproducer.char.string.">0123456789</prop>
+                                   </props>
+                            </constructor-arg>
+                     </bean>
+              </property>
+       </bean>
+
+       <!-- 配置method -->
+       <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+              <property name="urlMap">
+                     <map>
+                            <entry key="/manctrl/**" value="myResourceHandler" />
+                     </map>
+              </property>
+              <property name="order" value="100000" />
+       </bean>
+
+       <bean id="myResourceHandler" name="myResourceHandler"
+             class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler">
+              <property name="locations" value="/manctrl/" />
+              <property name="supportedMethods">
+                     <list>
+                            <value>GET</value>
+                            <value>HEAD</value>
+                            <value>POST</value>
+                     </list>
+              </property>
+
+       </bean>
+</beans>

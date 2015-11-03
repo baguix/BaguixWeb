@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean name="com.baguix.web.model.db.manctrl.TNavMenu">
+        <method name="repair">master</method>
+        <method name="findBarByRank">slave</method>
+        <method name="findChildByRank">slave</method>
+        <method name="getLeftTree">slave</method>
+    </bean>
+</beans>

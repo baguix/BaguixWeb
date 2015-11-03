@@ -1,0 +1,78 @@
+.header {
+    margin-top: 30px;
+}
+
+.navbar-brand {
+    clear: both;
+}
+
+.footer {
+    margin: 30px;
+    text-align: center;
+}
+
+.input-icon-container {
+    position: relative;
+}
+
+.input-icon-container .fa {
+    color: gray;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.input-icon-container input,
+.input-icon-container textarea {
+    padding-left: 30px;
+}
+
+.main {
+    margin: 30px auto 0 auto;
+}
+
+.login-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 300;
+    max-width: 350px;
+    min-width: 350px;
+    padding: 0 30px 30px 30px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.login-form h1 {
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.login-form a {
+    color: #999;
+}
+
+.login-form .form-control {
+    background-color: rgba(200, 200, 200, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    color: rgb(0, 0, 0);
+}
+
+.login-form .input-icon-container .fa {
+    color: rgb(190, 190, 190);
+}
+
+.login-form .control-label {
+    margin-bottom: 10px;
+}
+
+.login-form .btn-social {
+    max-width: 220px;
+}
+
+.login-form label {
+    font-weight: 400;
+}
