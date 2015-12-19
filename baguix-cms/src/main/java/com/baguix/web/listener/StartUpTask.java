@@ -71,5 +71,10 @@ public class StartUpTask implements ApplicationListener<ContextRefreshedEvent> {
         InitServiceI catoryService = (InitServiceI) evt.getApplicationContext().getBean("initCategoryService");
         catoryService.repair();
         logger.info("网站栏目数据修复完毕.");
+
+        logger.info("网站新闻数据修复中...");
+        InitServiceI newsService = (InitServiceI) evt.getApplicationContext().getBean("initNewsService");
+        newsService.repair();
+        logger.info("网站新闻数据修复完毕.");
     }
 }

@@ -539,3 +539,24 @@
 [INFO][2015-11-01 22:09:34,213][系统消息] 销毁操作开始：
 [INFO][2015-11-01 22:09:34,213][系统消息] ...
 [INFO][2015-11-01 22:09:34,213][系统消息] 销毁操作结束！
+[DEBUG][2015-12-12 03:34:04,225][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-12-12 03:34:04,290][缓存加载] overview缓存成功！
+[DEBUG][2015-12-12 03:34:04,298][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-12-12 03:34:04,298][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-12-12 03:35:00,003][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-12-12 03:35:00
+[DEBUG][2015-12-12 03:40:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-12-12 03:40:00
+[DEBUG][2015-12-12 03:45:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-12-12 03:45:00
+[INFO][2015-12-12 03:45:48,189][系统消息] 销毁操作开始：
+[INFO][2015-12-12 03:45:48,190][系统消息] ...
+[INFO][2015-12-12 03:45:48,190][系统消息] 销毁操作结束！
+[DEBUG][2015-12-12 03:50:39,496][缓存加载] 系统Application域即将缓存overview数据。
+[DEBUG][2015-12-12 03:50:39,496][缓存加载] overview缓存成功！
+[DEBUG][2015-12-12 03:50:39,498][缓存加载] 系统Application域即将缓存siteinfo数据。
+[DEBUG][2015-12-12 03:50:39,498][缓存加载] siteinfo缓存成功！
+[DEBUG][2015-12-12 03:52:28,942][com.baguix.web.action.manctrl.AdminMainAct] post=验证码 code=bne7
+[INFO][2015-12-12 03:52:29,342][com.baguix.web.action.manctrl.AdminMainAct] 用户来访
+[DEBUG][2015-12-12 03:55:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-12-12 03:55:00
+[DEBUG][2015-12-12 04:00:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz计划任务。2015-12-12 04:00:00
+[INFO][2015-12-12 04:04:46,422][系统消息] 销毁操作开始：
+[INFO][2015-12-12 04:04:46,422][系统消息] ...
+[INFO][2015-12-12 04:04:46,422][系统消息] 销毁操作结束！

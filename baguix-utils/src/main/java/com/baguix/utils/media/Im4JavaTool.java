@@ -35,10 +35,10 @@ public class Im4JavaTool {
 
 	/**
 	 * 获得图片的尺寸
-	 * @param imagePath
-	 * @return
+	 * @param imagePath 图片的路径
+	 * @return int数组，int[0]宽度，int[1]高度，单位px
 	 */
-	public static int[] getWidthHeight(String imagePath) {
+	public int[] getWidthHeight(String imagePath) {
 		int[] wh = {0,0};
 		try {
 			File picture = new File(imagePath);
@@ -56,10 +56,10 @@ public class Im4JavaTool {
 	
 	/**
 	 * 获得图片的宽度
-	 * @param imagePath
-	 * @return
+	 * @param imagePath 图片的路径
+	 * @return int类型，宽度，单位px
 	 */
-	public static int getWidth(String imagePath) {
+	public int getWidth(String imagePath) {
 		int w = 0;
 		try {
 			File picture = new File(imagePath);
@@ -77,10 +77,10 @@ public class Im4JavaTool {
 	
 	/**
 	 * 获得图片的高度
-	 * @param imagePath
-	 * @return
+	 * @param imagePath 图片的路径
+	 * @return int类型，高度，单位px
 	 */
-	public static int getHeight(String imagePath) {
+	public int getHeight(String imagePath) {
 		int w = 0;
 		try {
 			File picture = new File(imagePath);
@@ -113,7 +113,7 @@ public class Im4JavaTool {
 	 * @param y1
 	 *            结束挫坐标
 	 */
-	public static void cutImage(String srcPath, String newPath, int x, int y,
+	public void cutImage(String srcPath, String newPath, int x, int y,
 			int x1, int y1) throws Exception {
 		int width = x1 - x;
 		int height = y1 - y;
@@ -152,7 +152,7 @@ public class Im4JavaTool {
 	 * @param newPath
 	 *            缩放后图片的路径
 	 */
-	public static void cutImage(int width, int height, String srcPath,
+	public void scaleImage(int width, int height, String srcPath,
 			String newPath) throws Exception {
 		IMOperation op = new IMOperation();
 		op.addImage(srcPath);
@@ -162,7 +162,7 @@ public class Im4JavaTool {
 
 		ConvertCmd convert = new ConvertCmd();
 
-		// linux下不要设置此值，不然会报错
+		// linux下不要设置setSearchPath，不然会报错
 		String spl = System.getProperty("file.separator");
 		if ((spl.equals("\\") || spl == "\\")) {
 			convert.setSearchPath(imageMagickPath);
@@ -181,7 +181,7 @@ public class Im4JavaTool {
 	 * @param newPath
 	 *            缩放后图片的路径
 	 */
-	public static void cutImage(int width, String srcPath, String newPath)
+	public void cutImage(int width, String srcPath, String newPath)
 			throws Exception {
 		IMOperation op = new IMOperation();
 		op.addImage(srcPath);
@@ -206,7 +206,7 @@ public class Im4JavaTool {
 	 * @param srcPath
 	 *            源图片路径
 	 */
-	public static void addImgTextEn(String srcPath, String color, int size, String text, String position) throws Exception {
+	public void addImgTextEn(String srcPath, String color, int size, String text, String position) throws Exception {
 		IMOperation op = new IMOperation();
 		// position的值是，左上角：northwest、左下角：southwest、右上角：northeast、右下角：southeast、中间：center。
 		op.font("verdana").gravity(position).pointsize(size).fill(color)
@@ -229,7 +229,7 @@ public class Im4JavaTool {
 	 * @param srcPath
 	 *            源图片路径
 	 */
-	public static void addImgTextCn(String srcPath, String color, int size, String text, String position) throws Exception {
+	public void addImgTextCn(String srcPath, String color, int size, String text, String position) throws Exception {
 		IMOperation op = new IMOperation();
 		//设置水印字体，Windows下用到
 		String spl = System.getProperty("file.separator");
@@ -273,7 +273,7 @@ public class Im4JavaTool {
 	 * @param alpha
 	 *            水印透明度
 	 */
-	public static void addImgImg(String waterImagePath, String srcPath,
+	public void addImgImg(String waterImagePath, String srcPath,
 			String destPath, String position,  int alpha) {
 		IMOperation op = new IMOperation();
 		// 左上角：northwest、左下角：southwest、右上角：northeast、右下角：southeast、中间：center。
@@ -284,7 +284,6 @@ public class Im4JavaTool {
 		op.addImage(srcPath);
 		op.addImage(destPath);
 		
-		
 		//构造器有true，命令会加gm，估计是linux下用，未经验证。
 		//CompositeCmd composite = new CompositeCmd(true);
 		CompositeCmd composite = new CompositeCmd();
@@ -294,7 +293,6 @@ public class Im4JavaTool {
 		}
 		try {
 			composite.run(op);
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
@@ -304,8 +302,6 @@ public class Im4JavaTool {
 		}
 	}
 	
-	
-	
 	/**
 	 * 增加图片边框：convert exam.jpg -bordercolor blue -border 5 border-1.jpg 
 	 * @param srcImagePath 原图
@@ -313,7 +309,7 @@ public class Im4JavaTool {
 	 * @param color 边框颜色
 	 * @param width 边框粗细
 	 */
-	public static void addBorder(String srcImagePath, String destImagePath, String color,  int width) {
+	public void addBorder(String srcImagePath, String destImagePath, String color,  int width) {
 		IMOperation op = new IMOperation();
 		op.addImage(srcImagePath);
 		op.bordercolor(color);
@@ -337,24 +333,5 @@ public class Im4JavaTool {
 		} catch (IM4JavaException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public static void main(String[] args) throws Exception {
-		Im4JavaTool it = new Im4JavaTool("C:\\im");
-		long start = System.currentTimeMillis();
-		String oldf = "D:\\testimg\\1.jpg";
-		String logo = "D:\\testimg\\logo.png";
-		String thumb = "D:\\testimg\\1-thumb.jpg";
-		String imglogo = "D:\\testimg\\1-logo.jpg";
-		String imgborder = "D:\\testimg\\1-border.jpg";
-		File of = new File(oldf); 
-		//获得尺寸
-		
-		it.cutImage(640,480,oldf,thumb);
-		//it.addImgTextEn(thumb, "#ff0000", 12, "aam", "southwest");
-		it.addImgTextCn(thumb, "#ff0000", 30, "中E文给力水印！", "southeast");
-//		it.addBorder(thumb, imgborder, "#000000", 5);
-//		it.addImgImg(logo, imgborder, imglogo, "southeast", 20);
-		
 	}
 }

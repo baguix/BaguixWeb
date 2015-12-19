@@ -14,34 +14,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.baguix.web.dao.BaseDaoI;
-import com.baguix.web.model.db.cms.TArticle;
+import com.baguix.web.model.db.cms.TAnnouncement;
 import com.baguix.web.model.easyui.DataGrid;
 import com.baguix.web.model.page.cms.Article;
 import com.baguix.web.service.cms.AnnouncementServiceI;
 import com.baguix.web.service.impl.BaseServiceImpl;
 
 @Service("announcementService")
-public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implements AnnouncementServiceI {
+public class AnnouncementServiceImpl extends BaseServiceImpl<TAnnouncement> implements AnnouncementServiceI {
 	
-	private BaseDaoI<TArticle> dao;
+	private BaseDaoI<TAnnouncement> dao;
 	
-	public BaseDaoI<TArticle> getDao() {
+	public BaseDaoI<TAnnouncement> getDao() {
 		return dao;
 	}
 	
 	@Autowired
-	public void setDao(BaseDaoI<TArticle> dao) {
+	public void setDao(BaseDaoI<TAnnouncement> dao) {
 		this.dao = dao;
 	}
 	
 	@Override
 	synchronized public Article add(Article art) {
-		TArticle t = new TArticle();
+		TAnnouncement t = new TAnnouncement();
 		BeanUtils.copyProperties(art, t);
 		t.setId(UUID.randomUUID().toString());
 		t.setCtime(new Date());
 		t.setMtime(new Date());
-		t.setType("announcement");
 		dao.save(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent(null);
@@ -52,7 +51,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 	@Override
 	public void delete(String ids) {
 		String[] nids = ids.split(",");
-		String hql = "update TArticle t set t.isdel=true where t.type='announcement' and  t.id in (";
+		String hql = "update TAnnouncement t set t.isdel=true where t.id in (";
 		for (int i = 0; i < nids.length; i++) {
 			if (i > 0) {
 				hql += ",";
@@ -66,7 +65,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 	@Override
 	public void remove(String ids) {
 		String[] nids = ids.split(",");
-		String hql = "delete TArticle t where t.type='announcement' and  t.id in (";
+		String hql = "delete TAnnouncement t where t.id in (";
 		for (int i = 0; i < nids.length; i++) {
 			if (i > 0) {
 				hql += ",";
@@ -79,10 +78,9 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 
 	@Override
 	synchronized public Article edit(Article art) {
-		TArticle t = new TArticle();
+		TAnnouncement t = new TAnnouncement();
 		BeanUtils.copyProperties(art, t);
 		t.setMtime(new Date());
-		t.setType("announcement");
 		dao.saveOrUpdate(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent(null);
@@ -92,7 +90,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 
 	@Override
 	public Article view(Article art) {
-		TArticle t = dao.getById(TArticle.class, art.getId());
+		TAnnouncement t = dao.getById(TAnnouncement.class, art.getId());
 		BeanUtils.copyProperties(t, art);
 		return art;
 	}
@@ -100,7 +98,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 	@Override
 	public Article view(String id) {
 		Article art = new Article();
-		TArticle t = dao.getById(TArticle.class, id);
+		TAnnouncement t = dao.getById(TAnnouncement.class, id);
 		BeanUtils.copyProperties(t, art);
 		return art;
 	}
@@ -108,12 +106,12 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 	@Override
 	public DataGrid datagrid(Article art) {
 		DataGrid dg = new DataGrid();
-		String hql = "from TArticle t where t.type='announcement'";
+		String hql = "from TAnnouncement t where 1=1 ";
 		Map<String, Object> params = new HashMap<String, Object>();
 		hql = addWhere(art, hql, params);
 		String totalHql = "select count(*) " + hql;
 		hql = addOrder(art, hql);
-		List<TArticle> l = dao.find(hql, params, art.getPage(), art.getRows());
+		List<TAnnouncement> l = dao.find(hql, params, art.getPage(), art.getRows());
 		List<Article> nl = new ArrayList<Article>();
 		changeModel(l, nl);
 		dg.setTotal(dao.count(totalHql, params));
@@ -131,7 +129,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 		}
 		else{
 			DataGrid dg = new DataGrid();
-			String hql = "from TArticle t where t.type='announcement'";
+			String hql = "from TAnnouncement t where 1=1 ";
 			Map<String, Object> params = new HashMap<String, Object>();
 			if(art.getQcondition()!= null){
 				QueryConditionFilter qcf = new QueryConditionFilter();
@@ -146,7 +144,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 				}
 			}
 			String totalHql = "select count(*) " + hql;
-			List<TArticle> l = dao.find(hql, params, art.getPage(), art.getRows());
+			List<TAnnouncement> l = dao.find(hql, params, art.getPage(), art.getRows());
 			List<Article> nl = new ArrayList<Article>();
 			changeModel(l, nl);
 			dg.setTotal(dao.count(totalHql, params));
@@ -157,9 +155,9 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 	}
 	
 	//private
-	private void changeModel(List<TArticle> l, List<Article> nl) {
+	private void changeModel(List<TAnnouncement> l, List<Article> nl) {
 		if (l != null && l.size() > 0) {
-			for (TArticle t : l) {
+			for (TAnnouncement t : l) {
 				Article u = new Article();
 				BeanUtils.copyProperties(t, u);
 				nl.add(u);
@@ -176,7 +174,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TArticle> implement
 
 	private String addWhere(Article art, String hql, Map<String, Object> params) {
 		if ( StringUtils.isNotEmpty( art.getTitle()) ) {
-			hql += " where where t.type='announcement' and t.title like :title";
+			hql += " where where t.title like :title";
 			params.put("title", "%%" + art.getTitle().trim() + "%%");
 		}
 		return hql;
