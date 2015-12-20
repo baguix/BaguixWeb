@@ -9,7 +9,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
- * <b>单页</b><br>
+ * <b>单页文章</b><br>
  *
  * @author Scott(SG)
  * @since 1.0

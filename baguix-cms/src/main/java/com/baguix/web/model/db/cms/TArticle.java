@@ -27,13 +27,12 @@ import java.util.UUID;
         length = 50,
         discriminatorType = DiscriminatorType.STRING
 )
-@DiscriminatorValue("article")
 
 //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region="javaClassName")
 @DynamicInsert(true)
 @DynamicUpdate(true)
 
-public class TArticle implements Serializable {
+public abstract class TArticle implements Serializable {
     //序列化ID
     private static final long serialVersionUID = 48L;
     //标识符
