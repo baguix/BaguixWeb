@@ -65,8 +65,10 @@ public abstract class TArticle implements Serializable {
     private String upimgstr;
     //上传图片原名列表
     private String img;
-    //缩略图文件名
-    private String thumbfile;
+    //缩略图文件名，支持3张缩略图
+    private String thumbfile0;
+    private String thumbfile1;
+    private String thumbfile2;
     //附件名列表
     private String filename;
     //附件文件位置列表
@@ -246,14 +248,34 @@ public abstract class TArticle implements Serializable {
     }
 
     @Lob
-    @Column(name = "ARTICLE_THUMBFILE", length = 2000)
+    @Column(name = "ARTICLE_THUMBFILE0", length = 2000)
 
-    public String getThumbfile() {
-        return thumbfile;
+    public String getThumbfile0() {
+        return thumbfile0;
     }
 
-    public void setThumbfile(String thumbfile) {
-        this.thumbfile = thumbfile;
+    public void setThumbfile0(String thumbfile0) {
+        this.thumbfile0 = thumbfile0;
+    }
+    @Lob
+    @Column(name = "ARTICLE_THUMBFILE1", length = 2000)
+
+    public String getThumbfile1() {
+        return thumbfile1;
+    }
+
+    public void setThumbfile1(String thumbfile1) {
+        this.thumbfile1 = thumbfile1;
+    }
+    @Lob
+    @Column(name = "ARTICLE_THUMBFILE2", length = 2000)
+
+    public String getThumbfile2() {
+        return thumbfile2;
+    }
+
+    public void setThumbfile2(String thumbfile2) {
+        this.thumbfile2 = thumbfile2;
     }
 
     @Lob
