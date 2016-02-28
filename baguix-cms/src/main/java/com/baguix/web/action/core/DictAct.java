@@ -25,6 +25,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -127,6 +128,19 @@ public class DictAct extends BaseAct {
     }
 
     /**
+     * 树型组合框要加载的数据
+     * @param dictId 字典名称
+     * @return json格式的响应
+     */
+    @RequestMapping(value = "/core/dict/data/{dictId}", produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String dictData(@PathVariable("dictId") String dictId) {
+        List<DictItem> list = dictItemService.getTree(dictId,null);
+        String json = JSON.toJSONStringWithDateFormat(list, "yyyy-MM-dd HH:mm:ss");
+        return json;
+    }
+
+    /**
      * 处理 Action
      */
     @RequestMapping(value = "/core/dict/add_deal", produces="text/html;charset=UTF-8")
@@ -141,7 +155,7 @@ public class DictAct extends BaseAct {
     @ResponseBody
     public String dictEditDeal(Dict dict) {
         Dict d = dictService.edit(dict);
-        String msg = getMessager("成功新增字典!",d);
+        String msg = getMessager("成功编辑字典!",d);
         return msg;
     }
 

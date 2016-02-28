@@ -17,8 +17,9 @@
 </head>
 
 <body>
-    <ss:SysDict dictname="yesno" name="a1" id="a1" init="false"/><br/>
+    <ss:SysDict dictname="yesno" name="a1" id="a1" init="false" /><br/>
     <ss:SysDict dictname="artprop" name="a2" id="a2" init="'最新,推荐'"/><br/>
     <ss:SysDict dictname="writer" name="a3" id="a3" init="'佚名'"/><br/>
+    <ss:SysDict dictname="categoryprop" name="a4" id="a4" init="'菜单'" style="width:200px;"/><br/>
 </body>
 </html>

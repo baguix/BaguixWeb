@@ -2,10 +2,12 @@ package com.baguix.web.taglib.easyui;
 
 import com.alibaba.fastjson.JSON;
 import com.baguix.web.model.db.core.TDictItem;
+import com.baguix.web.model.easyui.TreeData;
 import com.baguix.web.model.page.core.DictItem;
 import com.baguix.web.service.core.DictItemServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
 
@@ -117,17 +119,41 @@ public class DictionaryTemplate {
         return code.toString().replace("}{", "},{");
     }
 
-    //ComboBoxTree单选(EasyUI风格)
+    //SingleComboTree(EasyUI风格)
     public String getSingleComboTreeCode(String dictId){
         StringBuffer code = new StringBuffer();
         List<DictItem> list = dictItemService.getTree(dictId,null);
-        String json = JSON.toJSONStringWithDateFormat(list, "yyyy-MM-dd HH:mm:ss");
-        code.append("<select id=\"cc\" class=\"easyui-combotree\" style=\"width:200px;\"");
-        code.append("data-options=\"");
-        code.append("url:''");
-        code.append("\"");
+        List<TreeData> tlist = new ArrayList<>();
+        tlist = getTreeData(list,dictId);
+        String json = JSON.toJSONStringWithDateFormat(tlist, "yyyy-MM-dd HH:mm:ss");
+        code.append("<select id='[$id$]' name='[$name$]' style='[$style$]' ");
+        code.append("data-options=\"panelHeight:'auto'\"");
         code.append("></select>");
+        code.append("<script type='text/javascript'>");
+        code.append("$('#[$id$]').combotree();");
+        code.append("var [$name$]_data="+json+";");
+        code.append("$('#[$id$]').combotree('loadData',[$name$]_data);");
+        code.append("var [$name$]_value = [$init$];");
+        code.append("$('#[$id$]').combotree('setValue', [$name$]_value);");
+        code.append("</script>");
         return code.toString();
+    }
+
+    private List<TreeData> getTreeData(List<DictItem> list, String dictId){
+        List<TreeData> tlist = new ArrayList<>();
+        for (DictItem di : list){
+            TreeData td = new TreeData();
+            td.setId(di.getValue());
+            td.setText(di.getTitle());
+            td.setIconCls(null);
+            td.setState(null);
+            td.setAttributes(null);
+            if(di.getChildren()!=null) {
+                td.setChildren(getTreeData(di.getChildren(), dictId));
+            }
+            tlist.add(td);
+        }
+        return tlist;
     }
 
     //ComboBoxTree多选(EasyUI风格)

@@ -442,7 +442,7 @@ public class InitDictServiceImpl implements InitServiceI {
         cateprop.setName("categoryprop");
         cateprop.setTitle("栏目属性");
         cateprop.setComment("网站栏目选择“文章属性”项：");
-        cateprop.setType("CheckboxList");
+        cateprop.setType("SingleComboTree");
         cateprop.setCtime(new Date());
         cateprop.setRank(20);
         cateprop.setState(StateType.SHOW);
@@ -502,7 +502,7 @@ public class InitDictServiceImpl implements InitServiceI {
         source.setType("SingleCombobox");
         source.setCtime(new Date());
         source.setRank(10);
-        source.setState(StateType.SHOW);
+        source.setState(StateType.DELETE);
         source.setDictClass(bgDC);
         dictDao.saveOrUpdate(source);
 
@@ -533,7 +533,7 @@ public class InitDictServiceImpl implements InitServiceI {
         writer.setType("SingleCombobox");
         writer.setCtime(new Date());
         writer.setRank(20);
-        writer.setState(StateType.DELETE);
+        writer.setState(StateType.SHOW);
         writer.setDictClass(bgDC);
         dictDao.saveOrUpdate(writer);
 
