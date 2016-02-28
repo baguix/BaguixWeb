@@ -1,12 +1,14 @@
 package com.baguix.web.service.util.impl;
 
-import com.baguix.web.common.cache.SysData;
 import com.baguix.web.dao.BaseDaoI;
 import com.baguix.web.model.db.core.TDict;
+import com.baguix.web.model.db.core.TDictClass;
 import com.baguix.web.model.db.core.TDictItem;
-import com.baguix.web.service.core.DictItemServiceI;
+import com.baguix.web.model.enums.StateType;
+import com.baguix.web.model.page.core.Dict;
 import com.baguix.web.service.core.DictServiceI;
 import com.baguix.web.service.util.InitServiceI;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,13 +20,14 @@ import java.util.Map;
 @Service("initDictService")
 public class InitDictServiceImpl implements InitServiceI {
     @Autowired
+    private BaseDaoI<TDictClass> dictClassDao;
+
+    @Autowired
     private BaseDaoI<TDict> dictDao;
     @Autowired
     private BaseDaoI<TDictItem> dictItemDao;
     @Autowired
     private DictServiceI dictService;
-    @Autowired
-    private DictItemServiceI dictItemService;
 
 
     @Override
@@ -47,35 +50,89 @@ public class InitDictServiceImpl implements InitServiceI {
 
     //文章属性
     private void initYN() {
+        TDictClass sysDC= new TDictClass();
+        sysDC.setTitle("系统字典");
+        sysDC.setComment("本系统中普遍使用的字典，不能随意删除，删除后可能会导致系统失效。");
+        sysDC.setRank(10);
+        dictClassDao.saveOrUpdate(sysDC);
 
         //是否
         TDict yn1 = new TDict();
         yn1.setId("yesno");
         yn1.setName("yesno");
         yn1.setTitle("是否");
-        yn1.setComment("是否选项");
+        yn1.setComment("是否选项，是为默认");
         yn1.setType("RadioList");
         yn1.setCtime(new Date());
         yn1.setRank(10);
+        yn1.setState(StateType.SHOW);
+        yn1.setDictClass(sysDC);
         dictDao.saveOrUpdate(yn1);
 
         TDictItem y1 = new TDictItem();
         y1.setDict(yn1);
-        y1.setId("yes");
+        y1.setId("yes1");
         y1.setTitle("是");
         y1.setValue("true");
+        y1.setDef(true);
         y1.setRank(10);
         y1.setCtime(new Date());
         dictItemDao.saveOrUpdate(y1);
 
         TDictItem n1 = new TDictItem();
         n1.setDict(yn1);
-        n1.setId("no");
+        n1.setId("no1");
         n1.setTitle("否");
         n1.setValue("false");
+        n1.setDef(false);
         n1.setRank(20);
         n1.setCtime(new Date());
         dictItemDao.saveOrUpdate(n1);
+
+        //否是
+        TDict yn2 = new TDict();
+        yn2.setId("noyes");
+        yn2.setName("noyes");
+        yn2.setTitle("否是");
+        yn2.setComment("否是选项，否为默认");
+        yn2.setType("RadioList");
+        yn2.setCtime(new Date());
+        yn2.setRank(10);
+        yn2.setState(StateType.SHOW);
+        yn2.setDictClass(sysDC);
+        dictDao.saveOrUpdate(yn2);
+
+        TDictItem n2 = new TDictItem();
+        n2.setDict(yn2);
+        n2.setId("no2");
+        n2.setTitle("否");
+        n2.setDef(true);
+        n2.setValue("false");
+        n2.setRank(20);
+        n2.setCtime(new Date());
+        dictItemDao.saveOrUpdate(n2);
+
+        TDictItem y2 = new TDictItem();
+        y2.setDict(yn2);
+        y2.setId("yes2");
+        y2.setTitle("是");
+        y2.setValue("true");
+        y2.setDef(false);
+        y2.setRank(10);
+        y2.setCtime(new Date());
+        dictItemDao.saveOrUpdate(y2);
+
+        TDictClass bgDC= new TDictClass();
+        bgDC.setTitle("后台字典");
+        bgDC.setComment("后台使用的字典。");
+        bgDC.setRank(20);
+        dictClassDao.saveOrUpdate(bgDC);
+        TDictClass frontDC= new TDictClass();
+        frontDC.setTitle("前台字典");
+        frontDC.setComment("前台使用的字典。可以新增用于前台页面模版制作，但删除后可能会导致某些已经做好的前台功能失效。");
+        frontDC.setRank(30);
+        dictClassDao.saveOrUpdate(frontDC);
+
 
 
         //图片水印状态
@@ -87,6 +144,8 @@ public class InitDictServiceImpl implements InitServiceI {
         watermark.setType("SingleCombobox");
         watermark.setCtime(new Date());
         watermark.setRank(30);
+        watermark.setState(StateType.SHOW);
+        watermark.setDictClass(bgDC);
         dictDao.saveOrUpdate(watermark);
 
         TDictItem nowatermark = new TDictItem();
@@ -125,6 +184,8 @@ public class InitDictServiceImpl implements InitServiceI {
         watermarkpos.setType("RadioList");
         watermarkpos.setCtime(new Date());
         watermarkpos.setRank(40);
+        watermarkpos.setState(StateType.SHOW);
+        watermarkpos.setDictClass(bgDC);
         dictDao.saveOrUpdate(watermarkpos);
 
         TDictItem northeast = new TDictItem();
@@ -142,6 +203,7 @@ public class InitDictServiceImpl implements InitServiceI {
         southeast.setTitle("右下角");
         southeast.setValue("southeast");
         southeast.setRank(20);
+        southeast.setDef(true);
         southeast.setCtime(new Date());
         dictItemDao.saveOrUpdate(southeast);
 
@@ -169,20 +231,88 @@ public class InitDictServiceImpl implements InitServiceI {
         center.setId("wmcenter");
         center.setTitle("中间");
         center.setValue("center");
-        center.setRank(40);
+        center.setRank(50);
         center.setCtime(new Date());
         dictItemDao.saveOrUpdate(center);
 
+        //字典类型
+        TDict dicttype = new TDict();
+        dicttype.setId("dicttype");
+        dicttype.setName("dicttype");
+        dicttype.setTitle("字典类型");
+        dicttype.setComment("字典类型");
+        dicttype.setType("SingleCombobox");
+        dicttype.setCtime(new Date());
+        dicttype.setRank(30);
+        dicttype.setState(StateType.SHOW);
+        dicttype.setDictClass(bgDC);
+        dictDao.saveOrUpdate(dicttype);
+
+        TDictItem radiolist = new TDictItem();
+        radiolist.setDict(dicttype);
+        radiolist.setId("radiolist");
+        radiolist.setTitle("单选列表");
+        radiolist.setValue("RadioList");
+        radiolist.setRank(10);
+        radiolist.setCtime(new Date());
+        dictItemDao.saveOrUpdate(radiolist);
+
+        TDictItem checkboxlist = new TDictItem();
+        checkboxlist.setDict(dicttype);
+        checkboxlist.setId("checkboxlist");
+        checkboxlist.setTitle("多选列表");
+        checkboxlist.setValue("CheckboxList");
+        checkboxlist.setRank(20);
+        checkboxlist.setCtime(new Date());
+        dictItemDao.saveOrUpdate(checkboxlist);
+
+        TDictItem singlecombobox = new TDictItem();
+        singlecombobox.setDict(dicttype);
+        singlecombobox.setId("singlecombobox");
+        singlecombobox.setTitle("单选组合框");
+        singlecombobox.setValue("SingleCombobox");
+        singlecombobox.setRank(30);
+        singlecombobox.setCtime(new Date());
+        dictItemDao.saveOrUpdate(singlecombobox);
+
+        TDictItem multicombobox = new TDictItem();
+        multicombobox.setDict(dicttype);
+        multicombobox.setId("multicombobox");
+        multicombobox.setTitle("多选组合框");
+        multicombobox.setValue("MultiCombobox");
+        multicombobox.setRank(40);
+        multicombobox.setCtime(new Date());
+        dictItemDao.saveOrUpdate(multicombobox);
+
+        TDictItem singlecombotree = new TDictItem();
+        singlecombotree.setDict(dicttype);
+        singlecombotree.setId("singlecombotree");
+        singlecombotree.setTitle("单选树型组合框");
+        singlecombotree.setValue("SingleComboTree");
+        singlecombotree.setRank(50);
+        singlecombotree.setCtime(new Date());
+        dictItemDao.saveOrUpdate(singlecombotree);
+
+        TDictItem multicombotree = new TDictItem();
+        multicombotree.setDict(dicttype);
+        multicombotree.setId("multicombotree");
+        multicombotree.setTitle("多选树型组合框");
+        multicombotree.setValue("MultiComboTree");
+        multicombotree.setRank(60);
+        multicombotree.setCtime(new Date());
+        dictItemDao.saveOrUpdate(multicombotree);
 
         //文章属性
         TDict yn = new TDict();
         yn.setId("online");
         yn.setName("online");
-        yn.setTitle("是否显示");
+        yn.setTitle("显示隐藏");
         yn.setComment("网站文章选择“显示、隐藏”项：");
         yn.setType("RadioList");
         yn.setCtime(new Date());
         yn.setRank(10);
+        yn.setState(StateType.SHOW);
+        yn.setDictClass(sysDC);
         dictDao.saveOrUpdate(yn);
 
         TDictItem y = new TDictItem();
@@ -206,6 +336,11 @@ public class InitDictServiceImpl implements InitServiceI {
 
     //文章属性
     private void initAriProperty() {
+
+        //后台字典
+        String hql = "from TDictClass t where t.title='后台字典'";
+        TDictClass bgDC = dictClassDao.getByHql(hql);
+
         //文章属性
         TDict artprop = new TDict();
         artprop.setId("artprop");
@@ -215,6 +350,8 @@ public class InitDictServiceImpl implements InitServiceI {
         artprop.setType("CheckboxList");
         artprop.setCtime(new Date());
         artprop.setRank(10);
+        artprop.setState(StateType.SHOW);
+        artprop.setDictClass(bgDC);
         dictDao.saveOrUpdate(artprop);
 
         TDictItem isaudit = new TDictItem();
@@ -308,6 +445,8 @@ public class InitDictServiceImpl implements InitServiceI {
         cateprop.setType("CheckboxList");
         cateprop.setCtime(new Date());
         cateprop.setRank(20);
+        cateprop.setState(StateType.SHOW);
+        cateprop.setDictClass(bgDC);
         dictDao.saveOrUpdate(cateprop);
 
         TDictItem isnav = new TDictItem();
@@ -350,6 +489,10 @@ public class InitDictServiceImpl implements InitServiceI {
 
     //修复文章来源，文章作者字典
     private void initArtSrcWriData() {
+        //后台字典
+        String hql = "from TDictClass t where t.title='后台字典'";
+        TDictClass bgDC = dictClassDao.getByHql(hql);
+
         //来源
         TDict source = new TDict();
         source.setId("source");
@@ -359,6 +502,8 @@ public class InitDictServiceImpl implements InitServiceI {
         source.setType("SingleCombobox");
         source.setCtime(new Date());
         source.setRank(10);
+        source.setState(StateType.SHOW);
+        source.setDictClass(bgDC);
         dictDao.saveOrUpdate(source);
 
         TDictItem unit = new TDictItem();
@@ -388,6 +533,8 @@ public class InitDictServiceImpl implements InitServiceI {
         writer.setType("SingleCombobox");
         writer.setCtime(new Date());
         writer.setRank(20);
+        writer.setState(StateType.DELETE);
+        writer.setDictClass(bgDC);
         dictDao.saveOrUpdate(writer);
 
         TDictItem xb = new TDictItem();
@@ -422,105 +569,14 @@ public class InitDictServiceImpl implements InitServiceI {
      * 生成Easy UI html字符串，缓存
      */
     private void dictInMemory(){
-        String hql = "from TDict t ";
-        List<TDict> dictlist = dictService.find(hql);
+        String hql = "from TDict t where t.state=:state";
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("state",StateType.SHOW);
+        List<TDict> dictlist = dictService.find(hql, params);
         for(TDict d : dictlist){
-            String name = d.getName();
-            String value ="";
-            if(d.getType().equals("RadioList")){
-                value= getRadioListCode(d.getId());
-            }
-            if(d.getType().equals("CheckboxList")){
-                value= getCheckboxListCode(d.getId());
-            }
-            if(d.getType().equals("SingleCombobox")){
-                value= getSingleComboboxCode(d.getId());
-            }
-            SysData.dictMap.put(name, value);
+            Dict dd = new Dict();
+            BeanUtils.copyProperties(d, dd);
+            dictService.inCache(dd);
         }
-    }
-
-
-    // 类型：单选列表（如：●是  ○否）
-    private String getRadioListCode(String dictid) {
-        StringBuffer code = new StringBuffer();
-        String hql = "from TDictItem t where t.dict.id=:id order by t.rank";
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("id", dictid);
-        List<TDictItem> list = dictItemService.find(hql, params);
-        int i = 0;
-        for (TDictItem di : list) {
-            i++;
-            code.append("<label><input type='radio' id='[$id$]_" + i
-                    + "' name='[$name$]' value='" + di.getValue() + "' style='[$style$]' />" + di.getTitle()
-                    + "</label>");
-            code.append("&nbsp;\n");
-        }
-        code.append("initBegin");
-        code.append("<script type='text/javascript'>");
-        code.append("[$name$]_value = String([$init$]);");
-        code.append("$(\"input[name='[$name$]']\").each(function(){");
-        code.append("if( [$name$]_value==$(this).val() ){");
-        code.append("$(this).prop('checked', true);");
-        code.append("}else{");
-        code.append("$(this).prop('checked',false);");
-        code.append("}});");
-        code.append("</script>");
-        code.append("initEnd");
-        return code.toString();
-    }
-
-    // 类型：多选列表（如：■男装、■红色、□衬衣）
-    private String getCheckboxListCode(String dictid){
-        StringBuffer code = new StringBuffer();
-        String hql = "from TDictItem t where t.dict.id=:id order by t.rank";
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("id", dictid);
-        List<TDictItem> list = dictItemService.find(hql,params);
-        int i=0;
-        for(TDictItem di : list){
-            i++;
-            code.append("<label><input type='checkbox' id='[$id$]_"+i+"' name='[$name$]' value='"+di.getValue()+"' style='[$style$]' />"+di.getTitle()+"</label>");
-            code.append("&nbsp;\n");
-        }
-        code.append("initBegin");
-        code.append("<script type='text/javascript'>");
-        code.append("[$name$]_value = String([$init$]).split(',');");
-        code.append("$(\"input[name='[$name$]']\").each(function(){");
-        code.append("if( SS_inarray([$name$]_value, $(this).val()) ){");
-        code.append("$(this).prop('checked', true);");
-        code.append("}else{");
-        code.append("$(this).prop('checked',false);");
-        code.append("}});");
-        code.append("</script>");
-        return code.toString();
-    }
-
-    //ComboBox单选(EasyUI风格)
-    private String getSingleComboboxCode(String dictid){
-        StringBuffer code = new StringBuffer();
-        code.append("<input id='[$id$]' name='[$name$]' style='[$style$]' class='easyui-combobox' data-options=\"valueField: 'value', textField: 'text',panelHeight:'auto',data:");
-
-        //取数据
-        code.append("[");
-        String hql = "from TDictItem t where t.dict.id=:id order by t.rank";
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("id", dictid);
-        List<TDictItem> list = dictItemService.find(hql,params);
-        for(TDictItem di : list){
-            code.append("{'value':'");
-            code.append(di.getValue());
-            code.append("','text':'");
-            code.append(di.getTitle());
-            code.append("'}");
-        }
-        code.append("]");
-        code.append("\" />");
-        code.append("initBegin");
-        code.append("<script type='text/javascript'>");
-        code.append("[$name$]_value = [$init$];");
-        code.append("$('#[$id$]').combobox({'value': [$name$]_value});");
-        code.append("</script>");
-        return code.toString().replace("}{", "},{");
     }
 }

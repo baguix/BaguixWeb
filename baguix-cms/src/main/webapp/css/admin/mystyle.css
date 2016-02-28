@@ -19,6 +19,7 @@ ul{
 
 fieldset{
 	margin-top: 10px;
+	border: 1px dotted #ccc;
 }
 fieldset>legend{
 	color:#666;

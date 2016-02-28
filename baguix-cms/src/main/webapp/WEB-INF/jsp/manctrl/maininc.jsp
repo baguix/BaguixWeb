@@ -17,6 +17,7 @@
     <!-- my Lib -->
     <script type="text/javascript" src="${pageContext.request.contextPath}/jslib/myjslib.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/mystyle.css" type="text/css"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/uuid.js"></script>
     <script type="text/javascript">
         <!--
         var ss_basepath = '${pageContext.request.contextPath}';

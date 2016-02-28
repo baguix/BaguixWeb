@@ -3,8 +3,10 @@
  */
 package com.baguix.web.model.db.cms;
 
+import com.baguix.web.model.enums.StateType;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,7 +22,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "SS_ARTICLE", schema = "")
-//继承影射，每个实体类建立一个独立表
+//继承影射,子类对应同一张表
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(
         name = "ARTICLE_TYPE",
@@ -77,8 +79,6 @@ public abstract class TArticle implements Serializable {
     private long pagewordnum;
     //阅读数
     private long readnum;
-    //是否显示
-    private boolean state;
     //属性
     private String proper;
     //============================公共字段============================
@@ -88,6 +88,9 @@ public abstract class TArticle implements Serializable {
     private Date ctime;
     //修改时间
     private Date mtime;
+    //显示状态
+    private StateType state;
+
 
     //无参数的构造器
     public TArticle() {
@@ -322,17 +325,6 @@ public abstract class TArticle implements Serializable {
         this.readnum = readnum;
     }
 
-
-    @Column(name = "ARTICLE_STATE")
-    @org.hibernate.annotations.Type(type = "yes_no")
-    public boolean getState() {
-        return state;
-    }
-
-    public void setState(boolean state) {
-        this.state = state;
-    }
-
     @Lob
     @Column(name = "ARTICLE_PROPERTIES", length = 2000)
     public String getProper() {
@@ -370,6 +362,16 @@ public abstract class TArticle implements Serializable {
 
     public void setMtime(Date mtime) {
         this.mtime = mtime;
+    }
+
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "ARTICLE_STATE")
+    public StateType getState() {
+        return state;
+    }
+
+    public void setState(StateType state) {
+        this.state = state;
     }
 }
 

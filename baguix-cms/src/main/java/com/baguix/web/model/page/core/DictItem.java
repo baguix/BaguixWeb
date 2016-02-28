@@ -19,7 +19,25 @@ public class DictItem implements Serializable{
     
     //============================自定义字段============================
     //标题
-    private String title;
+	// 标题
+	private String title;
+	// 值
+	private String value;
+	// 是否默认
+	private String def;
+	// 字典ID
+	private String dictid;
+	// 层级
+	private int level;
+
+	// ============================树形Grid用的字段============================
+	private String iconCls;
+	private String state;
+	private String pid; // 父目录ID
+	private List<DictItem> children;
+	private Map<String, Object> attributes;
+	// ============================树形用的字段============================
+
     //============================公共字段============================
     //排序值
     private int rank;
@@ -49,8 +67,80 @@ public class DictItem implements Serializable{
     public void setTitle(String title){
         this.title=title;
     }
-    
-    public int getRank() {
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public String getDef() {
+		return def;
+	}
+
+	public void setDef(String def) {
+		this.def = def;
+	}
+
+	public String getDictid() {
+		return dictid;
+	}
+
+	public void setDictid(String dictid) {
+		this.dictid = dictid;
+	}
+
+	public String getPid() {
+		return pid;
+	}
+
+	public void setPid(String pid) {
+		this.pid = pid;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public String getIconCls() {
+		return iconCls;
+	}
+
+	public void setIconCls(String iconCls) {
+		this.iconCls = iconCls;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public List<DictItem> getChildren() {
+		return children;
+	}
+
+	public void setChildren(List<DictItem> children) {
+		this.children = children;
+	}
+
+	public Map<String, Object> getAttributes() {
+		return attributes;
+	}
+
+	public void setAttributes(Map<String, Object> attributes) {
+		this.attributes = attributes;
+	}
+
+	public int getRank() {
         return rank;
     }
     

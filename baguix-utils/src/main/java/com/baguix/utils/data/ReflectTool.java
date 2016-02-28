@@ -112,14 +112,7 @@ public class ReflectTool<T> {
                             map.put(name, value.toString());
                         }
                     }
-                    if (type.equals("class java.lang.Boolean")) {
-                        Method m = obj.getClass().getMethod(isser);
-                        Boolean value = (Boolean) m.invoke(obj);
-                        if (value != null) {
-                            map.put(name, value.toString());
-                        }
-                    }
-                    if (type.equals("boolean")) {
+                    if (type.equals("class java.lang.Boolean")|| type.equals("boolean")) {
                         Method m = obj.getClass().getMethod(isser);
                         Boolean value = (Boolean) m.invoke(obj);
                         if (value != null) {
@@ -247,14 +240,7 @@ public class ReflectTool<T> {
                             map.put("${" + name + "}", value.toString());
                         }
                     }
-                    if (type.equals("class java.lang.Boolean")) {
-                        Method m = obj.getClass().getMethod(getter);
-                        Boolean value = (Boolean) m.invoke(obj);
-                        if (value != null) {
-                            map.put(name, value.toString());
-                        }
-                    }
-                    if (type.equals("boolean")) {
+                    if (type.equals("class java.lang.Boolean")||type.equals("boolean")) {
                         Method m = obj.getClass().getMethod(getter);
                         Boolean value = (Boolean) m.invoke(obj);
                         if (value != null) {

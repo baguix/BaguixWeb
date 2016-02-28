@@ -86,6 +86,5 @@
         </script>
         <div class="cls"></div>
         <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
-        <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
     </div>
 </div>

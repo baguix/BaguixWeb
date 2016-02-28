@@ -1,44 +1,70 @@
-[{
-	"id":1,
-	"text":"系统操作指南",
-	"children":[{
-			"id": 8,
-			"text":"快速上手"
-		},
-		{
-		"id":2,
-		"text":"网站结构化",
-		"state":"closed",
-		"children":[{
-			"id":3,
-			"text":"设定总栏目",
-			"attributes":{
-				"url":"value1"
-			}
-		},{
-			"id": 8,
-			"text":"设置专栏"
-		},{
-			"id": 8,
-			"text":"内容管理"
-		}]
-	},
-	{
-		"id":2,
-		"text":"网站美化",
-		"state":"closed",
-		"children":[{
-			"id":3,
-			"text":"首页美化",
-			"attributes":{
-				"url":"value1"
-			}
-		},{
-			"id": 8,
-			"text":"广告管理"
-		},{
-			"id": 8,
-			"text":"特效制作"
-		}]
-	}]
-}]
+[
+  {
+    "id": 1,
+    "text": "系统操作指南",
+    "iconCls": "icon-introduce",
+    "children": [
+      {
+        "id": 2,
+        "text": "升级日志",
+        "iconCls": "icon-upgrade"
+      },
+      {
+        "id": 3,
+        "text": "快速上手",
+        "iconCls": "icon-quickstart"
+      },
+      {
+        "id": 4,
+        "text": "操作向导",
+        "iconCls": "icon-guide"
+      },
+      {
+        "id": 5,
+        "text": "网站结构化",
+        "state": "closed",
+        "iconCls": "icon-handbook",
+        "children": [
+          {
+            "id": 6,
+            "text": "设定总栏目",
+            "attributes": {
+              "url": "value1"
+            }
+          },
+          {
+            "id": 7,
+            "text": "设置专栏"
+          },
+          {
+            "id": 8,
+            "text": "内容管理"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "网站美化",
+        "state": "closed",
+        "iconCls": "icon-handbook",
+        "children": [
+          {
+            "id": 10,
+            "text": "首页美化",
+            "attributes": {
+              "url": "value1"
+            }
+          },
+          {
+            "id": 11,
+            "text": "广告管理"
+          },
+          {
+            "id": 12,
+            "text": "特效制作"
+          }
+        ]
+      }
+    ]
+  }
+]

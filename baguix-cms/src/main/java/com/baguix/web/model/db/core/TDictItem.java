@@ -37,12 +37,15 @@ public class TDictItem implements Serializable {
 	private String title;
 	// 值
 	private String value;
-	
+	// 是否默认
+	private boolean def;
+
 	//属于哪个字典
 	private TDict dict;
 	// ===========================树形==========================
 	private TDictItem parent;
 	private Set<TDictItem> child= new HashSet<TDictItem>(0);
+	private int level;
 	// ============================公共字段============================
 	// 排序值
 	private int rank;
@@ -80,7 +83,17 @@ public class TDictItem implements Serializable {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
+
+	@Column(name="DICTITEM_DEFAULT")
+	@org.hibernate.annotations.Type(type = "yes_no")
+	public boolean getDef() {
+		return def;
+	}
+
+	public void setDef(boolean def) {
+		this.def = def;
+	}
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "DICT_ID")
 	public TDict getDict() {
@@ -118,6 +131,15 @@ public class TDictItem implements Serializable {
 
 	public void setChild(Set<TDictItem> child) {
 		this.child = child;
+	}
+
+	@Column(name = "DICTITEM_LEVEL", length = 20)
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
 	@Column(name = "DICTITEM_RANK", length = 20)

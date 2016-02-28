@@ -1,5 +1,6 @@
 package com.baguix.utils.media;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -32,7 +33,7 @@ public class Im4JavaToolTest {
     /**
      * Method: getWidthHeight(String imagePath)
      */
-    @Test
+    @Ignore
     public void testGetWidthHeight() throws Exception {
         int[] wh = Im.getWidthHeight(imagePath);
         logger.info("Width:" + wh[0] + "; Height:" + wh[1]);
@@ -41,7 +42,7 @@ public class Im4JavaToolTest {
     /**
      * Method: getWidth(String imagePath)
      */
-    @Test
+    @Ignore
     public void testGetWidth() throws Exception {
         logger.info("Width:" + Im.getWidth(imagePath));
     }
@@ -49,7 +50,7 @@ public class Im4JavaToolTest {
     /**
      * Method: getHeight(String imagePath)
      */
-    @Test
+    @Ignore
     public void testGetHeight() throws Exception {
         logger.info("Height:" + Im.getHeight(imagePath));
     }
@@ -57,7 +58,7 @@ public class Im4JavaToolTest {
     /**
      * Method: cutImage(String srcPath, String newPath, int x, int y, int x1, int y1)
      */
-    @Test
+    @Ignore
     public void testCutImageForSrcPathNewPathXYX1Y1() throws Exception {
         String newImage = imageMagickPath + "/cut1.jpg";
         Im.cutImage(imagePath, newImage, 50, 50, 500, 400);
@@ -70,7 +71,7 @@ public class Im4JavaToolTest {
     /**
      * Method: cutImage(int width, int height, String srcPath, String newPath)
      */
-    @Test
+    @Ignore
     public void testCutImageForWidthHeightSrcPathNewPath() throws Exception {
         String newImage = imageMagickPath + "/cut2.jpg";
         Im.scaleImage(400,500,imagePath,newImage);
@@ -82,7 +83,7 @@ public class Im4JavaToolTest {
     /**
      * Method: cutImage(int width, String srcPath, String newPath)
      */
-    @Test
+    @Ignore
     public void testCutImageForWidthSrcPathNewPath() throws Exception {
         //TODO: Test goes here... 
     }
@@ -90,7 +91,7 @@ public class Im4JavaToolTest {
     /**
      * Method: addImgTextEn(String srcPath, String color, int size, String text, String position)
      */
-    @Test
+    @Ignore
     public void testAddImgTextEn() throws Exception {
         //TODO: Test goes here... 
     }
@@ -98,7 +99,7 @@ public class Im4JavaToolTest {
     /**
      * Method: addImgTextCn(String srcPath, String color, int size, String text, String position)
      */
-    @Test
+    @Ignore
     public void testAddImgTextCn() throws Exception {
         //TODO: Test goes here... 
     }
@@ -106,7 +107,7 @@ public class Im4JavaToolTest {
     /**
      * Method: addImgImg(String waterImagePath, String srcPath, String destPath, String position, int alpha)
      */
-    @Test
+    @Ignore
     public void testAddImgImg() throws Exception {
         //TODO: Test goes here... 
     }
@@ -114,7 +115,7 @@ public class Im4JavaToolTest {
     /**
      * Method: addBorder(String srcImagePath, String destImagePath, String color, int width)
      */
-    @Test
+    @Ignore
     public void testAddBorder() throws Exception {
         //TODO: Test goes here... 
     }
@@ -122,7 +123,7 @@ public class Im4JavaToolTest {
     /**
      * Method: main(String[] args)
      */
-    @Test
+    @Ignore
     public void testMain() throws Exception {
         //TODO: Test goes here... 
     }

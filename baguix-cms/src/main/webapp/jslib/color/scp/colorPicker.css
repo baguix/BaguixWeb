@@ -4,12 +4,14 @@ div.colorPicker-picker {
   background: url(arrow.gif) no-repeat top right;
   cursor: pointer;
   line-height: 18px;
+  vertical-align:middle;
   font-size:0.75em;
   font-weight:bold;
   text-align: center;
   display: inline-block;
   height: 16px;
   width: 16px;
+  margin-left: 1px;
 }
 
 div.colorPicker-palette {

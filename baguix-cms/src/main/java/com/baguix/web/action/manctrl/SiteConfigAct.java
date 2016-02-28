@@ -70,14 +70,21 @@ public class SiteConfigAct {
         return "manctrl/setting/imageinfo";
     }
 
-    @RequestMapping(value = "/manctrl/imageinfo/thumbup")
-    public String thumbup(Model model){
+    @RequestMapping(value = "/manctrl/imageinfo/logoup")
+    public String logoUpload(Model model){
+        logger.debug("logoUpload");
         ImageInfo ii = SysData.imageInfo;
         Map<String, String> info = ii.toHashMap(ii);
         for (Map.Entry<String, String> entry : info.entrySet()) {
             model.addAttribute(entry.getKey(), ValueTool.null2String(entry.getValue(), ""));
         }
         return "manctrl/setting/thumbup";
+    }
+
+    @RequestMapping(value = "/manctrl/imageinfo/logoslector")
+    public String logoSlector(Model model){
+        logger.debug("logoSlector");
+        return "manctrl/setting/thumbslector";
     }
 
     @RequestMapping(value = "/manctrl/imageinfo-save", method = RequestMethod.POST)

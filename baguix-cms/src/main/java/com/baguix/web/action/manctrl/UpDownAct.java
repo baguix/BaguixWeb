@@ -5,25 +5,23 @@
 package com.baguix.web.action.manctrl;
 
 import com.alibaba.fastjson.JSON;
-import com.baguix.utils.data.ValueTool;
-import com.baguix.web.common.cache.SysData;
-import com.baguix.web.model.easyui.Messager;
-import com.baguix.web.model.page.manctrl.ImageInfo;
-import com.baguix.web.model.page.manctrl.SiteInfo;
+import com.baguix.utils.data.NowDateTool;
+import com.baguix.utils.file.FileManager;
+import com.baguix.utils.file.PathTool;
+import com.baguix.web.model.page.UploadedMsg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <b>上传下载Action</b><br>
@@ -36,7 +34,7 @@ public class UpDownAct {
 
     @RequestMapping(value = "/manctrl/uploadImg", method = RequestMethod.POST)
     @ResponseBody
-    public String siteInfoSave(@RequestParam("file")MultipartFile[] files, HttpServletRequest request) {
+    public String uploadSiteWarterMarkImg(@RequestParam("file")MultipartFile[] files, HttpServletRequest request) {
         String uptype = request.getParameter("uptype");
         String path = request.getParameter("path");
         String picwidth = request.getParameter("picwidth");
@@ -44,18 +42,32 @@ public class UpDownAct {
         String thumbw = request.getParameter("thumbw");
         String thumbh = request.getParameter("thumbh");
 
+        List<String> urls = new ArrayList<String>();
         if(files!=null&&files.length>0){
+            // 存储位置前缀
+            String webFolder = PathTool.getWebRootPath();
+            String url = "/ueditor/jsp/upload/" + path + NowDateTool.getDateFilePath();
+            String phyDir= webFolder + url;
+            //创建目录位置
+            FileManager.newFolder(phyDir);
             //循环获取file数组中得文件
             for(int i = 0;i<files.length;i++){
                 MultipartFile file = files[i];
+                // 文件原名
+                String oriFileName = file.getOriginalFilename();
+                // 扩展名
+                String ext = oriFileName.substring(oriFileName.indexOf("."),oriFileName.length());
+                // 生成文件名
+                String filename =  "/"+ NowDateTool.now("HH-mm-ss-SSS")+ext;
                 //保存文件
-                saveFile(file, path);
+                saveFile(file, phyDir + filename);
+                urls.add(url  + filename);
             }
         }
 
-        Messager m = new Messager();
-        m.setMsg("网站基本信息修改成功！");
+        UploadedMsg m = new UploadedMsg();
         m.setSuccess(true);
+        m.setUrls(urls);
         return JSON.toJSONString(m);
     }
 

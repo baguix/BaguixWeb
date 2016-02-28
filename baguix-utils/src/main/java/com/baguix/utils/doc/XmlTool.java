@@ -16,6 +16,7 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.xpath.XPathExpression;
 import org.jdom2.xpath.XPathFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
@@ -159,6 +160,19 @@ public class XmlTool {
             list = xpath_exp.diagnose(root, false).getResult();
         }
         return list;
+    }
+
+    /**
+     * <b>java对象写成XML字符串</b><br>
+     * @param obj JavaBean
+     * @return XML字符串
+     */
+    public static String obj2XmlStr(Object obj, String alias) {
+        String result;
+        XStream xs = XStreamCDATA.initXStream();
+        xs.alias(alias, obj.getClass());
+        result = xs.toXML(obj);
+        return result;
     }
 
     /**
@@ -308,5 +322,29 @@ public class XmlTool {
             e.printStackTrace();
         }
         return obj;
+    }
+
+    /**
+     * <b>XML流映射为Map</b><br>
+     * @param is 输入流
+     * @return Map对象
+     */
+    public static Map<String,String> xml2Map(InputStream is) {
+        Map<String,String> result = new HashMap();
+        try {
+            SAXBuilder sb = new SAXBuilder();
+            Document doc = sb.build(is);
+            Element root = doc.getRootElement();
+            List<Element> list = root.getChildren();
+            for (Element e : list){
+                result.put(e.getName(), e.getText());
+            }
+            is.close();
+        } catch (JDOMException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

@@ -6,13 +6,18 @@ package com.baguix.web.model.db.core;
 import java.util.*;
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
+import com.baguix.web.model.enums.StateType;
+import org.hibernate.annotations.*;
 
 /**
  * Description：Database model: 字典表
- * 
+ * 配合Jsp tag
+ * <ss:SysDict dictname="watermarkpos" name="watermarkPosition" id="watermarkpos"	init="wmkpos"/>
+ *
  * @author Scott
  */
 
@@ -20,6 +25,9 @@ import org.hibernate.annotations.DynamicUpdate;
 @Table(name = "SS_DICT", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@Proxy(lazy = false)
+
 public class TDict implements Serializable {
 	// 序列化ID
 	private static final long serialVersionUID = 48L;
@@ -27,7 +35,7 @@ public class TDict implements Serializable {
 	private String id;
 
 	// ============================自定义字段============================
-	// 名称(唯一)
+	// 名称(唯一)，定义字典使用的名称，例如：dictname="watermarkpos"
 	private String name;
 	// 标题
 	private String title;
@@ -35,8 +43,14 @@ public class TDict implements Serializable {
 	private String comment;
 	// 类型：单选列表（如：●是  ○否）、多选列表（如：■男装、■红色、□衬衣）、ComboBox单选、ComboBox多选、ComboTree单选、ComboTree多选
 	private String type;
+	// 数据存放位置：0内存中，1将数据以*.json格式写出
+	private int datalocation;
 	// 字典项
 	private Set<TDictItem> item;
+	private TDictClass dictClass;
+	// ===========================树形（实现字典的分类）==========================
+	private TDict parent;
+	private Set<TDict> child= new HashSet<TDict>(0);
 	// ============================公共字段============================
 	// 排序值
 	private int rank;
@@ -44,6 +58,8 @@ public class TDict implements Serializable {
 	private Date ctime;
 	// 修改时间
 	private Date mtime;
+	// 显示状态
+	private StateType state;
 
 	// 无参数的构造器
 	public TDict() {
@@ -103,6 +119,25 @@ public class TDict implements Serializable {
 		this.type = type;
 	}
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "PID")
+	public TDict getParent() {
+		return parent;
+	}
+
+	public void setParent(TDict parent) {
+		this.parent = parent;
+	}
+
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "parent")
+	public Set<TDict> getChild() {
+		return child;
+	}
+
+	public void setChild(Set<TDict> child) {
+		this.child = child;
+	}
+
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="dict", cascade={CascadeType.ALL})
 	public Set<TDictItem> getItem() {
 		return item;
@@ -110,6 +145,16 @@ public class TDict implements Serializable {
 
 	public void setItem(Set<TDictItem> item) {
 		this.item = item;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "DICTCLASS_ID")
+	public TDictClass getDictClass() {
+		return dictClass;
+	}
+
+	public void setDictClass(TDictClass dictClass) {
+		this.dictClass = dictClass;
 	}
 
 	@Column(name = "DICT_RANK", length = 20)
@@ -139,5 +184,15 @@ public class TDict implements Serializable {
 
 	public void setMtime(Date mtime) {
 		this.mtime = mtime;
+	}
+
+	@Enumerated(EnumType.ORDINAL)
+	@Column(name = "DICT_STATE")
+	public StateType getState() {
+		return state;
+	}
+
+	public void setState(StateType state) {
+		this.state = state;
 	}
 }

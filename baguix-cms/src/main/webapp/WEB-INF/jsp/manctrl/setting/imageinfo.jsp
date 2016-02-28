@@ -19,27 +19,26 @@
 <div>
     <form id="manctrl_imgtool_form" method="post">
         <script type="text/javascript">
+            // 字典初值
             var cutp = ${cutPic};
             var isthum = ${thumbPic};
+            var bord = ${border};
             var wmktype = ${watermark};
             var wmkpos = '${watermarkPosition}';
-            var bord = ${border};
         </script>
-
         <fieldset>
             <legend>缩/裁原图功能</legend>
             <table>
                 <tr>
                     <td class="formlabel">是否开启：</td>
-                    <td><ss:SysDict dictname="yesno" name="cutPic" id="cutPic" init="cutp"></ss:SysDict></td>
+                    <td><ss:SysDict dictname="yesno" name="cutPic" id="cutPic" init="cutp" /></td>
                 </tr>
                 <tr>
                     <td class="formlabel">图片尺寸(px)：</td>
                     <td>
-                        <input id="picWidth" name="picWidth" class="easyui-numberspinner" style="width:100px;"
-                               required="required" data-options="value:${picWidth},min:1,max:1600,editable:true"> X
-                        <input id="picHeight" name="picHeight" class="easyui-numberspinner" style="width:100px;"
-                               required="required" data-options="value:${picHeight},min:1,max:1600,editable:true">
+                        <ss:euNumber id="picWidth" css="width:100px;" val="${picWidth}" dataoption="min:1,max:1600,editable:true,required:'required'"/>
+                        ×
+                        <ss:euNumber id="picHeight" css="width:100px;" val="${picHeight}" dataoption="min:1,max:1600,editable:true,required:'required'"/>
                     </td>
                 </tr>
             </table>
@@ -49,15 +48,14 @@
             <table>
                 <tr>
                     <td class="formlabel">是否开启：</td>
-                    <td><ss:SysDict dictname="yesno" name="isThumb" id="isThumb" init="isthum"></ss:SysDict></td>
+                    <td><ss:SysDict dictname="yesno" name="thumbPic" id="thumbPic" init="isthum"/></td>
                 </tr>
                 <tr>
                     <td class="formlabel">缩略图尺寸(px)：</td>
                     <td>
-                        <input id="thumbWidth" name="thumbWidth" class="easyui-numberspinner" style="width:100px;"
-                               required="required" data-options="value:${thumbWidth},min:1,max:1600,editable:true"> X
-                        <input id="thumbHeight" name="thumbHeight" class="easyui-numberspinner" style="width:100px;"
-                               required="required" data-options="value:${thumbHeight},min:1,max:1600,editable:true">
+                        <ss:euNumber id="thumbWidth" css="width:100px;" val="${thumbWidth}" dataoption="min:1,max:1600,editable:true,required:'required'"/>
+                        ×
+                        <ss:euNumber id="thumbHeight" css="width:100px;" val="${thumbHeight}" dataoption="min:1,max:1600,editable:true,required:'required'"/>
                     </td>
                 </tr>
             </table>
@@ -68,23 +66,19 @@
                 <tr>
                     <td class="formlabel">是否开启：</td>
                     <td>
-                        <ss:SysDict dictname="yesno" name="border" id="border" init="bord"></ss:SysDict>
+                        <ss:SysDict dictname="yesno" name="border" id="border" init="bord"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">边框颜色：</td>
                     <td>
-                        <input type="text" id="borderColor" name="borderColor" style="width:100px;color:${borderColor};"
-                               title="边框颜色" value="${borderColor}"/>
-                        <input type="text" id="wmbcp" name="wmbcp" style="width:100px;" size="100" title="边框颜色"
-                               value=""/>
+                        <ss:euColorBox id="borderColor" val="${borderColor}"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">边框大小：</td>
                     <td>
-                        <input id="borderSize" name="borderSize" class="easyui-numberspinner" style="width:80px;"
-                               required="required" data-options="value:${borderSize},min:1,max:30,editable:true">
+                        <ss:euNumber id="borderSize" val="${borderSize}" dataoption="min:1,max:30,editable:true,required:'required'" css="width:80px;"/>
                     </td>
                 </tr>
             </table>
@@ -96,74 +90,51 @@
                     <td class="formlabel">类型选择：</td>
                     <td>
                         <ss:SysDict dictname="watermark" name="watermark" id="watermark"
-                                    init="wmktype"></ss:SysDict>
+                                    init="wmktype"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印的位置：</td>
                     <td>
-                        <ss:SysDict dictname="watermarkpos" name="watermarkpos" id="watermarkpos"
-                                    init="wmkpos"></ss:SysDict>
+                        <ss:SysDict dictname="watermarkpos" name="watermarkPosition" id="watermarkpos"
+                                    init="wmkpos"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印文字内容：</td>
                     <td>
-                        <input type="text" id="markText" name="markText" style="width:300px;color:${markTextColor};"
-                               title="缩略图宽度" value="${markText}"/>
+                        <ss:euTextBox id="markText" val="${markText}" />
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印文字颜色：</td>
                     <td>
-                        <input type="text" id="markTextColor" name="markTextColor"
-                               style="width:100px;color:${markTextColor};" title="水印颜色" value="${markTextColor}"/>
-                        <input type="text" id="wmcp" name="wmcp" style="width:100px;" size="100" title="水印颜色"
-                               value=""/>
+                        <ss:euColorBox id="markTextColor" val="${markTextColor}"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印文字字号：</td>
                     <td>
-                        <input id="markTextSize" name="markTextSize" class="easyui-numberspinner"
-                               style="width:80px;"
-                               required="required" data-options="value:${markTextSize},min:1,max:100,editable:true">
+                        <ss:euNumber id="markTextSize" val="${markTextSize}" dataoption="min:1,max:100,editable:true,required:'required'" css="width:80px;"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印图片：</td>
                     <td>
-                        <input type="text" id="markImg" name="markImg" style="width:250px;" title="图片水印"
-                               value="${markImg}"/>
+                        <img  id="imgshow" style="border:1px solid #ccc;display:block;height:120px;" />
+                        <div style="height:5px;"> </div>
                         <a href="javascript:void(0);" class="easyui-linkbutton" icon="icon-upload"
                            onclick="uploadThumb()">上传</a>
                         <a href="javascript:void(0);" class="easyui-linkbutton" icon="icon-image"
                            onclick="thumbSelector()">选择</a>
-                        <input type="hidden" id="watermarkimgstr" name="watermarkimgstr" value="${markImgStr}">
-                        <img id="watermarkimgshow" style="display:none;position:absolute;z-index:999"/>
-                        <script type="text/javascript">
-                            $('#watermarkimg').hover(
-                                    function (e) {
-                                        if ($('#watermarkimg').val() != "") {
-                                            $('#watermarkimgshow').attr('src', $('#watermarkimg').val());
-                                            $('#watermarkimgshow').css('left', e.pageX);
-                                            $('#watermarkimgshow').css('top', e.pageY);
-                                            $('#watermarkimgshow').show();
-                                        }
-                                    },
-                                    function () {
-                                        $('#watermarkimgshow').hide();
-                                    }
-                            );
-                        </script>
+                        <input id="markImg" name="markImg" type="hidden" value="${markImg}"/>
+                        <input id="markImgStr" name="markImgStr" type="hidden" value="${markImgStr}" />
                     </td>
                 </tr>
                 <tr>
                     <td class="formlabel">水印图片透明度：</td>
                     <td>
-                        <input id="markImgAlpha" name="markImgAlpha" class="easyui-numberspinner"
-                               style="width:80px;"
-                               required="required" data-options="value:${markImgAlpha},min:5,max:80,editable:true">
+                        <ss:euNumber id="markImgAlpha" val="${markImgAlpha}" dataoption="min:5,max:80,editable:true,required:'required'" css="width:80px;"/>
                     </td>
                 </tr>
             </table>
@@ -172,6 +143,13 @@
 </div>
 <script type="text/javascript">
     <!--
+    if($('#markImg').val() != ""){
+        var img = "${pageContext.request.contextPath}"+ $('#markImg').val();
+    }else{
+        var img = "${pageContext.request.contextPath}/images/nopic120.gif";
+    }
+    $('#imgshow').attr('src', img );
+
     function submitForm() {
         $('#manctrl_imgtool_form').form('submit', {
             url: '${pageContext.request.contextPath}/manctrl/imageinfo-save.do',
@@ -186,74 +164,56 @@
             }
         });
     }
-    var initColors=[
-        "EEEEEE", "DDDDDD", "CCCCCC", "BBBBBB", "999999", "000000",
-        "FF0000", "00FF00", "0000FF", "FFFF00", "00FFFF", "FF00FF",
-        "FFCC00", "FF9900", "FF3300", "FF0000", "CC0000", "CC6600",
-        "99CC00", "99CC99", "00CC00", "009900", "999900", "339999",
-        "00CCFF", "0099FF", "0033FF", "0000CC", "3399CC", "663399",
-        "FF99FF", "CC00FF", "CC6600", "FF3399", "CC3399", "990099"
-    ];
-    //水印颜色
-    $('#wmcp').colorPicker({
-        pickerDefault: '${markTextColor}',
-        colors: initColors,
-        showHexField: false
-    });
-    $('#wmcp').change(function(){
-        $('#markTextColor').css('color',$('#wmcp').val()).focus();
-        $('#markTextColor').val($('#wmcp').val()).css('color',$('#wmcp').val());
-    });
-
-    //边框颜色
-    $('#wmbcp').colorPicker({
-        pickerDefault: '${borderColor}',
-        colors: initColors,
-        showHexField: false
-    });
-    $('#wmbcp').change(function(){
-        $('#borderColor').css('color',$('#wmbcp').val());
-        $('#borderColor').val($('#wmbcp').val()).css('color',$('#wmbcp').val());
-    });
-
 
     //上传缩略图弹框
     function uploadThumb() {
-        parent.SysUploadDialog("缩略图上传", "manctrl/imageinfo/thumbup.do", "", "add");
+        parent.SysUploadDialog("水印Logo上传", "manctrl/imageinfo/logoup.do", "", "add");
     }
 
     function thumbSelector() {
-        parent.SysImageDialog("缩略图选择器", "manctrl/imageinfo/thumbslector.do", "", 590, 400, "add");
+        parent.SysImageDialog("水印Logo选择器", "manctrl/imageinfo/logoslector.do", "", 590, 400, "add");
     }
 
     //缩略图回设值
     function setThumb(v) {
-        $('#watermarkimg').val(v);
-        is = $('#watermarkimgstr').val() + "," + v;
+        $('#markImg').val(v);
+        is = $('#markImgStr').val() + "," + v;
         var arr = new Array();
         arr = is.split(",");
         arr.unique();
         is = arr.join(",");
-        $('#watermarkimgstr').val(is);
+        $('#markImgStr').val(is);
+        if($('#markImg').val() != ""){
+            var img = "${pageContext.request.contextPath}"+ $('#markImg').val();
+        }else{
+            var img = "${pageContext.request.contextPath}/images/nopic120.gif";
+        }
+        $('#imgshow').attr('src', img );
     }
 
     //缩略图选择器需要的函数（一）
     function getUploadImgTitle() {
-        name = $('#watermarkimgstr').val();
+        name = $('#markImgStr').val();
         return name;
     }
     //缩略图选择器需要的函数（二）
     function getUploadImgSrc() {
-        name = $('#watermarkimgstr').val();
+        name = $('#markImgStr').val();
         return name;
     }
     //缩略图选择器需要的函数（三）
     function setUploadImgTitle(name) {
-        $('#watermarkimgstr').val(name);
+        $('#markImg').val(name);
     }
     //缩略图选择器需要的函数（四）
     function setUploadImgSrc(name) {
-        $('#watermarkimgstr').val(name);
+        $('#markImgStr').val(name);
+        if($('#markImg').val() != ""){
+            var img = "${pageContext.request.contextPath}"+ $('#markImg').val();
+        }else{
+            var img = "${pageContext.request.contextPath}/images/nopic120.gif";
+        }
+        $('#imgshow').attr('src', img );
     }
     //======================================系统弹窗事件Begin======================================
     //关闭函数

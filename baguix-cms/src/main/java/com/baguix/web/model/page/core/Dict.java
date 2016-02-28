@@ -27,8 +27,14 @@ public class Dict implements Serializable{
     private String title;
     //备注
     private String comment;
+	//类型
+	private String type;
     //状态
     private String state;
+	//字典分类
+	private String dcid;
+	//字典分类名称
+	private String dctitle;
     //字典项
     private String itemids;
     //============================公共字段============================
@@ -76,16 +82,40 @@ public class Dict implements Serializable{
     public void setComment(String comment){
         this.comment=comment;
     }
-	
-    public String getState(){
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getState(){
         return state;
     }
     
     public void setState(String state){
         this.state=state;
     }
-    
-    public String getItemids() {
+
+	public String getDcid() {
+		return dcid;
+	}
+
+	public void setDcid(String dcid) {
+		this.dcid = dcid;
+	}
+
+	public String getDctitle() {
+		return dctitle;
+	}
+
+	public void setDctitle(String dctitle) {
+		this.dctitle = dctitle;
+	}
+
+	public String getItemids() {
 		return itemids;
 	}
 

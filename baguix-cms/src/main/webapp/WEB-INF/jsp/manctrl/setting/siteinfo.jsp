@@ -10,6 +10,7 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <jsp:include page="../maininc.jsp"></jsp:include>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/pub/form.css"/>
 </head>
 <body class="easyui-layout" style="visibility:hidden">
 <script type="text/javascript">
@@ -45,70 +46,59 @@
     //-->
 </script>
 
+
+
 <div class="easyui-panel" style="padding:10px;width:90%;margin:0 auto;" data-options="fit:true,border:false">
 
     <form id="manctrl_siteinfo_form" method="post" action="siteinfo-deal.do">
-        <table style="width:650px;margin:0 auto;">
+        <table class="gridtable" style="width:650px;margin:0 auto;">
             <tr>
                 <td class="ct" align="right">网站名称：</td>
                 <td class="cc">
-                    <input type="text" id="title" name="title" value="${title}" style="width:500px;" size="100"/>
+                    <ss:euTextBox id="title" val="${title}"/>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站标题连接符：</td>
                 <td class="cc">
-                    <input type="text" id="titleSeparator" name="titleSeparator" value="${titleSeparator}"
-                           style="width:50px;" size="5"/>
-
+                    <ss:euTextBox id="titleSeparator" val="${titleSeparator}" css="width:50px;"/>
                     <div class="tips">
-                            <span class="tips">
-                                如：连接符是“<span class="redfont">-</span>”。列表页：网站名 <span class="redfont">-</span> 栏目名；内容页：网站名 <span class="redfont">-</span> 栏目名 <span class="redfont">-</span> 文章标题
-                            </span>
+                        如：连接符是“<span class="redfont">-</span>”。列表页：网站名 <span class="redfont">-</span> 栏目名；内容页：网站名 <span class="redfont">-</span> 栏目名 <span class="redfont">-</span> 文章标题
                     </div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站副标题：</td>
                 <td class="cc">
-                    <input type="text" id="subTitle" name="subTitle" value="${subTitle}" style="width:500px;"
-                           size="100"/>
-
+                    <ss:euTextBox id="subTitle" val="${subTitle}"/>
                     <div class="tips">副标题与网站名称之间不会自动添加连接符。</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站网址：</td>
                 <td class="cc">
-                    <input type="text" id="siteUrl" name="siteUrl" value="${siteUrl}" style="width:500px;"
-                           size="100"/>
-
+                    <ss:euTextBox id="siteUrl" val="${siteUrl}"/>
                     <div class="tips">网站网址如有填写，前台文章路径将加入该网址做绝对路径引用。</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站关键词：</td>
                 <td class="cc">
-                        <textarea id="keywords" name="keywords" style="width:500px; height:60px;" cols="40"
-                                  rows="5">${keywords}</textarea>
-
+                    <ss:euTextBox id="keywords" dataoption="multiline:true" val="${keywords}" css="width:100%;height:60px;"/>
                     <div class="tips">全站默认关键词，有利于搜索引擎收录，注意：多个关键词请用英文逗号“,”隔开</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站描述：</td>
                 <td class="cc">
-                        <textarea id="description" name="description" style="width:500px; height:60px;" cols="40"
-                                  rows="5">${description}</textarea>
-
+                    <ss:euTextBox id="description" dataoption="multiline:true" val="${description}" css="width:100%;height:60px;"/>
                     <div class="tips">全站默认关键词，有利于搜索引擎收录</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">TCP/IP备案号：</td>
                 <td class="cc">
-                    <input type="text" id="icp" name="icp" value="${icp}" style="width:200px;" size="100"/>
-
+                    <ss:euTextBox id="icp" val="${icp}"/>
                     <div class="c">
                         <span class="tips">工信部网站备案号</span>
                     </div>
@@ -117,37 +107,30 @@
             <tr>
                 <td class="ct" align="right">公安局备案号：</td>
                 <td class="cc">
-                    <input type="text" id="police" name="police" value="${police}" style="width:200px;" size="100"/>
-
+                    <ss:euTextBox id="police" val="${police}"/>
                     <div class="tips">
-                        <span class="tips">当地公安局备案号，例如广西网警为：http://www.gx.cyberpolice.cn</span>
+                        当地公安局备案号，例如广西网警为：http://www.gx.cyberpolice.cn
                     </div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">公安局备案代码：</td>
                 <td class="cc">
-                        <textarea id="policeCode" name="policeCode" style="width:500px; height:60px;" cols="40"
-                                  rows="5">${policeCode}</textarea>
-
-                    <div class="tips">全站默认关键词，有利于搜索引擎收录</div>
+                    <ss:euTextBox id="policeCode" dataoption="multiline:true" val="${policeCode}" css="width:100%;height:120px;"/>
+                    <div class="tips">公安局挂网站首页在代码</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站版权：</td>
                 <td class="cc">
-                        <textarea id="copyright" name="copyright" style="width:500px; height:60px;" cols="40"
-                                  rows="5">${copyright}</textarea>
-
+                    <ss:euTextBox id="copyright" dataoption="multiline:true" val="${copyright}" css="width:100%;height:60px;"/>
                     <div class="tips">留作版权信息使用</div>
                 </td>
             </tr>
             <tr>
                 <td class="ct" align="right">网站授权许可号：</td>
                 <td class="cc">
-                    <input type="text" id="license" name="license" value="${license}" style="width:500px;"
-                           size="100"/>
-
+                    <ss:euTextBox id="license" val="${license}" />
                     <div class="tips">正版用户享受售后服务的凭证</div>
                 </td>
             </tr>

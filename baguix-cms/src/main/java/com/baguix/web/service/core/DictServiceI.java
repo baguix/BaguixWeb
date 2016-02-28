@@ -7,11 +7,16 @@ import com.baguix.web.service.BaseServiceI;
 
 public interface DictServiceI  extends BaseServiceI<TDict> {
 	
-	//Web
-	public Dict add(Dict dict);
-	public void remove(String ids);
-	public DataGrid datagrid(Dict dict);
-	public Dict edit(Dict dict);
-	public Dict view(Dict dict);
-	public Dict search(String where);
+	// 管理
+	Dict add(Dict dict);
+	Dict edit(Dict dict);
+	void delete(String ids);
+	void remove(String ids);
+	// 查看
+	DataGrid datagrid(Dict dict);
+	Dict view(Dict dict);
+	Dict search(String where);
+	// 系统缓存管理
+	void inCache(Dict dict);
+	void clsCache(String dictName);
 }

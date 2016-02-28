@@ -50,7 +50,7 @@ public class ImageInfo {
     // 水印图片路径
     private String markImg = "/upfile/sys/logo.png";
     // 水印图片路径串
-    private String markImgStr = "/upfile/sys/logo.png";
+    private String markImgStr = "/upfile/sys/logo1.png,/upfile/sys/logo2.png";
     // 水印图片路径
     private int markImgAlpha = 25;
 

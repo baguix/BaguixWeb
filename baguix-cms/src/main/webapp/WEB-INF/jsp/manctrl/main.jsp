@@ -74,8 +74,7 @@
             fit: true,
             border: false,
             tools: [{
-                iconCls: 'icon-cancel',
-
+                iconCls: 'icon-closebtn',
                 handler: function () {
                     var tabnum = main_tabs_index;
                     for (i = tabnum; i > 0; i--) {
@@ -84,7 +83,7 @@
                     main_tabs.tabs('select', 0);
                 }
             }, {
-                iconCls: 'icon-help',
+                iconCls: 'icon-helpbtn',
                 handler: function () {
                     main_tree.tree({url: '${pageContext.request.contextPath}/manctrl/deflefttree.do'});
                     main_layout.layout('expand', 'east');

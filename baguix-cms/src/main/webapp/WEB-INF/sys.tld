@@ -5,20 +5,16 @@
     <tlib-version>1.0</tlib-version>
     <short-name>mytaglib</short-name>
 
-	<!-- 系统后台导航菜单 Begin -->
 	<tag>
 		<name>AdminMenuBar</name>
 		<tag-class>com.baguix.web.taglib.AdminMenuBarTag</tag-class>
-		<!-- body-content为标签体允许的内容 ，scriptless表示标签体的内容不允许是java脚本代码，empty表示该标签没有标签体-->
-		<body-content>empty</body-content>
+        <body-content>empty</body-content>
         <attribute>
 			<name>id</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
-	<!-- 系统后台导航菜单 End -->
-
 	<!-- 字典 Begin -->
 	<tag>
 		<name>SysDict</name>
@@ -41,4 +37,67 @@
 		</attribute>
 	</tag>
 	<!-- 字典 End -->
+	<tag>
+		<name>euTextBox</name>
+		<tag-class>com.baguix.web.taglib.easyui.TextBox</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name><required>true</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>dataoption</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>css</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>val</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>attr</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>euNumber</name>
+		<tag-class>com.baguix.web.taglib.easyui.NumberSpinner</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name><required>true</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>dataoption</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>css</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>val</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>attr</name><required>false</required><rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+	<name>euColorBox</name>
+	<tag-class>com.baguix.web.taglib.easyui.ColorBox</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>id</name><required>true</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>dataoption</name><required>false</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>css</name><required>false</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>val</name><required>false</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>colors</name><required>false</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>attr</name><required>false</required><rtexprvalue>true</rtexprvalue>
+	</attribute>
+</tag>
 </taglib>

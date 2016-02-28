@@ -32,7 +32,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
        <mvc:resources mapping="/images/**" location="/images/" cache-period="3600"/>
        <mvc:resources mapping="/js/**" location="/js/" cache-period="3600"/>
        <mvc:resources mapping="/jslib/**" location="/jslib/" cache-period="3600"/>
-       <mvc:resources mapping="/ueditor/jsp/upload/image/**" location="/ueditor/jsp/upload/image/" cache-period="3600"/>
+       <mvc:resources mapping="/ueditor/jsp/upload/**" location="/ueditor/jsp/upload/" cache-period="3600"/>
        <mvc:resources mapping="/css/**" location="/css/" cache-period="3600"/>
        <mvc:resources mapping="/fonts/**" location="/fonts/" cache-period="3600"/>
        <mvc:resources mapping="/favicon.ico" location="/favicon.ico" cache-period="3600"/>

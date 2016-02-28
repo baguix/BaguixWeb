@@ -39,10 +39,8 @@
 				},
 				onOpen : function() {
 					var target = $(this);
-					setTimeout(function(){
-						var fw = GetFrameWindow(upladoer[0]);
-						fw.target = target;
-					},100);
+					var fw = GetFrameWindow(upladoer[0]);
+					fw.target = target;
 				}
 			});
 		}
@@ -93,11 +91,9 @@
 				},
 				onOpen : function() {
 					var target = $(this);
-					setTimeout(function(){
-						var fw = GetFrameWindow(imagedlg[0]);
-						fw.opened = 1;
-						fw.target = target;
-					},100);
+					var fw = GetFrameWindow(imagedlg[0]);
+					fw.opened = 1;
+					fw.target = target;
 				}
 			});
 		}
@@ -106,51 +102,52 @@
 	
 	
 	//====================================================新增/编辑弹窗====================================================
-	var sys_add_Dialog = $('<div style="overflow: hidden;"/>');
-	var adddlg = $('<iframe/>');
+	var sys_Dialog = $('<div style="overflow: hidden;"/>');
+	var sysdlg = $('<iframe/>');
 
-	function SysAddDialog(caption, url, w, h, data) {
+	function SysDialog(caption, url, w, h, data) {
+		// 组装参数
+		var par ='';
+		if (data != null){
+			par += '?'+jQuery.param(data);
+		}
 		if (url != null) {
-			adddlg.attr({
-				'src' : '${pageContext.request.contextPath}/' + url,
+			sysdlg.attr({
+				'src' : '${pageContext.request.contextPath}/' + url + par,
 				width : '100%',
 				height : '100%',
 				frameborder : '0'
 			});
-			sys_add_Dialog.dialog({
+			sys_Dialog.dialog({
 				title : caption,
 				height : h,
 				width : w,
 				minimizable : false,
 				maximizable : true,
 				modal : true,
-				content : adddlg,
+				content : sysdlg,
 				buttons:[{
 					text : '确定',
 					iconCls : 'icon-confirm',
 					handler : function() {
-						var fw = GetFrameWindow(adddlg[0]);
+						var fw = GetFrameWindow(sysdlg[0]);
 						fw.okEvent();
 					}},
 					{
 						text : '取消',
 						iconCls : 'icon-cancel',
 						handler : function() {
-							sys_add_Dialog.dialog('close');
+							sys_Dialog.dialog('close');
 						}
 				}],
 				onClose : function() {
-					var fw = GetFrameWindow(adddlg[0]);
+					var fw = GetFrameWindow(sysdlg[0]);
 					fw.closeEvent();
 				},
 				onOpen : function() {
 					var target = $(this);
-					setTimeout(function(){
-						var fw = GetFrameWindow(adddlg[0]);
-						fw.target = target;
-						fw.opened = 1;
-						fw.backdata = data;
-					},100);
+					var fw = GetFrameWindow(sysdlg[0]);
+					fw.target = target;
 				}
 			});
 		}

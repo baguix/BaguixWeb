@@ -69,25 +69,25 @@ public class InitMenuServiceImpl implements InitServiceI {
         gen.setRank(10);
         navMenuDao.saveOrUpdate(gen);
 
-        TNavMenu log = new TNavMenu();
-        log.setId("updatelog");
-        log.setParent(gen);
-        log.setTitle("升级日志");
-        log.setIcon("icon-home");
-        log.setType("menu");
-        log.setLevel(1);
-        log.setTarget("link");
-        log.setUrl("goURLBlank(###system-logger.html###);");
+        TNavMenu updatelog = new TNavMenu();
+        updatelog.setId("updatelog");
+        updatelog.setParent(gen);
+        updatelog.setTitle("网站说明");
+        updatelog.setIcon("icon-baseinfo");
+        updatelog.setType("menu");
+        updatelog.setLevel(1);
+        updatelog.setTarget("link");
+        updatelog.setUrl("goURLBlank(###system-logger.html###);");
         gen.setHassub(true);
-        log.setCtime(new Date());
-        log.setRank(10);
-        navMenuDao.saveOrUpdate(log);
+        updatelog.setCtime(new Date());
+        updatelog.setRank(10);
+        navMenuDao.saveOrUpdate(updatelog);
 
         TNavMenu style = new TNavMenu();
         style.setId("sitestyle");
         style.setParent(gen);
         style.setTitle("网站风格");
-        style.setIcon("icon-home");
+        style.setIcon("icon-sitestyle");
         style.setType("menu");
         style.setLevel(1);
         style.setTarget("link");
@@ -101,7 +101,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         home.setId("sitehome");
         home.setParent(style);
         home.setTitle("首页风格");
-        home.setIcon("icon-home");
+        home.setIcon("icon-homestyle");
         home.setType("tree");
         home.setLevel(1);
         home.setTarget("link");
@@ -230,7 +230,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         resetrank.setId("resetrank");
         resetrank.setParent(cate);
         resetrank.setTitle("重置排序");
-        resetrank.setIcon("icon-reset");
+        resetrank.setIcon("icon-rank");
         resetrank.setType("tree");
         resetrank.setLevel(1);
         resetrank.setTarget("link");
@@ -243,7 +243,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         art.setId("art");
         art.setParent(doc);
         art.setTitle("文章管理");
-        art.setIcon("icon-paper");
+        art.setIcon("icon-articles");
         art.setType("menu");
         art.setLevel(1);
         art.setTarget("link");
@@ -359,11 +359,11 @@ public class InitMenuServiceImpl implements InitServiceI {
         info.setId("siteinfo");
         info.setParent(site);
         info.setTitle("基本信息");
-        info.setIcon("icon-baseinfo");
+        info.setIcon("icon-siteinfo");
         info.setType("tree");
         info.setLevel(1);
         info.setTarget("link");
-        info.setUrl("doJSCode(###SS_main_Dialog('网站基本信息','siteinfo.do',800,600);###)");
+        info.setUrl("doJSCode(###SS_sys_Dialog('网站基本信息','siteinfo.do',800,600);###)");
         info.setCtime(new Date());
         info.setRank(10);
         navMenuDao.saveOrUpdate(info);
@@ -372,79 +372,197 @@ public class InitMenuServiceImpl implements InitServiceI {
         images.setId("imagesetting");
         images.setParent(site);
         images.setTitle("图片/水印");
-        images.setIcon("icon-image");
+        images.setIcon("icon-picture");
         images.setType("tree");
         images.setLevel(1);
         images.setTarget("link");
-        images.setUrl("doJSCode(###SS_main_Dialog('图片处理参数','imageinfo.do',600,600);###)");
+        images.setUrl("doJSCode(###SS_sys_Dialog('图片处理参数','imageinfo.do',600,600);###)");
         images.setCtime(new Date());
         images.setRank(30);
         navMenuDao.saveOrUpdate(images);
 
-//		TNavMenu db = new TNavMenu();
-//		db.setId("database");
-//		db.setParent(sys);
-//		db.setTitle("数据管理");
-//		db.setIcon("icon-database");
-//		db.setType("menu");
-//		db.setLevel(1);
-//		db.setTarget("link");
-//		db.setUrl("SS_main_menuTree('database')");
-//		db.setCtime(new Date());
-//		db.setRank(40);
-//		navMenuDao.saveOrUpdate(db);
-//
-//		TNavMenu dbback = new TNavMenu();
-//		dbback.setId("dbback");
-//		dbback.setParent(db);
-//		dbback.setTitle("数据库备份");
-//		dbback.setIcon("icon-dbbackup");
-//		dbback.setType("tree");
-//		dbback.setLevel(1);
-//		dbback.setTarget("link");
-//		dbback.setUrl("manctrl/dbback.jsp");
-//		dbback.setCtime(new Date());
-//		dbback.setRank(10);
-//		navMenuDao.saveOrUpdate(dbback);
-//
-//		TNavMenu fileman = new TNavMenu();
-//		fileman.setId("fileman");
-//		fileman.setParent(db);
-//		fileman.setTitle("文件管理");
-//		fileman.setIcon("icon-hole");
-//		fileman.setType("tree");
-//		fileman.setLevel(1);
-//		fileman.setTarget("link");
-//		fileman.setUrl("manctrl/filemanager/file.jsp");
-//		fileman.setCtime(new Date());
-//		fileman.setRank(20);
-//		navMenuDao.saveOrUpdate(fileman);
-//
-//		TNavMenu dbdown = new TNavMenu();
-//		dbdown.setId("datadown");
-//		dbdown.setParent(db);
-//		dbdown.setTitle("数据包下载");
-//		dbdown.setIcon("icon-download");
-//		dbdown.setType("tree");
-//		dbdown.setLevel(1);
-//		dbdown.setTarget("link");
-//		dbdown.setUrl("manctrl/datadown.jsp");
-//		dbdown.setCtime(new Date());
-//		dbdown.setRank(30);
-//		navMenuDao.saveOrUpdate(dbdown);
-//
-//		TNavMenu logger = new TNavMenu();
-//		logger.setId("logger");
-//		logger.setParent(db);
-//		logger.setTitle("日志管理");
-//		logger.setIcon("icon-logger");
-//		logger.setType("tree");
-//		logger.setLevel(1);
-//		logger.setTarget("link");
-//		logger.setUrl("manctrl/logger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
-//		logger.setCtime(new Date());
-//		logger.setRank(30);
-//		navMenuDao.saveOrUpdate(logger);
+        TNavMenu siteoperation = new TNavMenu();
+        siteoperation.setId("siteoperation");
+        siteoperation.setParent(sys);
+        siteoperation.setTitle("网站运维");
+        siteoperation.setIcon("icon-siteconfig");
+        siteoperation.setType("menu");
+        siteoperation.setLevel(1);
+        siteoperation.setHassub(true);
+        siteoperation.setTarget("link");
+        siteoperation.setUrl("SS_main_menuTree('siteoperation')");
+        siteoperation.setCtime(new Date());
+        siteoperation.setRank(20);
+        navMenuDao.saveOrUpdate(siteoperation);
+
+		TNavMenu db = new TNavMenu();
+		db.setId("database");
+		db.setParent(siteoperation);
+		db.setTitle("数据管理");
+		db.setIcon("icon-database");
+		db.setType("menu");
+		db.setLevel(2);
+		db.setTarget("link");
+		db.setUrl("SS_main_menuTree('database')");
+		db.setCtime(new Date());
+		db.setRank(10);
+		navMenuDao.saveOrUpdate(db);
+
+		TNavMenu dbback = new TNavMenu();
+		dbback.setId("dbback");
+		dbback.setParent(db);
+		dbback.setTitle("数据库备份");
+		dbback.setIcon("icon-dbbackup");
+		dbback.setType("tree");
+		dbback.setLevel(1);
+		dbback.setTarget("link");
+		dbback.setUrl("manctrl/dbback.jsp");
+		dbback.setCtime(new Date());
+		dbback.setRank(10);
+		navMenuDao.saveOrUpdate(dbback);
+
+        TNavMenu dbdown = new TNavMenu();
+        dbdown.setId("datadown");
+        dbdown.setParent(db);
+        dbdown.setTitle("数据包下载");
+        dbdown.setIcon("icon-downloaddb");
+        dbdown.setType("tree");
+        dbdown.setLevel(1);
+        dbdown.setTarget("link");
+        dbdown.setUrl("manctrl/datadown.jsp");
+        dbdown.setCtime(new Date());
+        dbdown.setRank(20);
+        navMenuDao.saveOrUpdate(dbdown);
+
+		TNavMenu fileman = new TNavMenu();
+		fileman.setId("fileman");
+		fileman.setParent(db);
+		fileman.setTitle("文件管理");
+		fileman.setIcon("icon-hole");
+		fileman.setType("tree");
+		fileman.setLevel(1);
+		fileman.setTarget("link");
+		fileman.setUrl("manctrl/filemanager/file.jsp");
+		fileman.setCtime(new Date());
+		fileman.setRank(30);
+		navMenuDao.saveOrUpdate(fileman);
+
+        TNavMenu dict = new TNavMenu();
+        dict.setId("dict");
+        dict.setParent(db);
+        dict.setTitle("字典管理");
+        dict.setIcon("icon-dictionary");
+        dict.setType("tree");
+        dict.setLevel(1);
+        dict.setTarget("link");
+        dict.setUrl("addTabHref(###core/dict/manager.do###)");
+        dict.setCtime(new Date());
+        dict.setRank(40);
+        navMenuDao.saveOrUpdate(dict);
+
+        TNavMenu syslogger = new TNavMenu();
+        syslogger.setId("syslogger");
+        syslogger.setParent(siteoperation);
+        syslogger.setTitle("日志系统");
+        syslogger.setIcon("icon-logger");
+        syslogger.setType("menu");
+        syslogger.setLevel(2);
+        syslogger.setTarget("link");
+        syslogger.setUrl("SS_main_menuTree('syslogger')");
+        syslogger.setCtime(new Date());
+        syslogger.setRank(20);
+        navMenuDao.saveOrUpdate(syslogger);
+
+        TNavMenu frontlogger = new TNavMenu();
+        frontlogger.setId("frontlogger");
+        frontlogger.setParent(syslogger);
+        frontlogger.setTitle("前台日志");
+        frontlogger.setIcon("icon-sitelogger");
+        frontlogger.setType("tree");
+        frontlogger.setLevel(1);
+        frontlogger.setTarget("link");
+        frontlogger.setUrl("manctrl/serverlogger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
+        frontlogger.setCtime(new Date());
+        frontlogger.setRank(10);
+        navMenuDao.saveOrUpdate(frontlogger);
+
+		TNavMenu operlogger = new TNavMenu();
+        operlogger.setId("operlogger");
+        operlogger.setParent(syslogger);
+        operlogger.setTitle("后台日志");
+        operlogger.setIcon("icon-backlogger");
+        operlogger.setType("tree");
+        operlogger.setLevel(1);
+        operlogger.setTarget("link");
+        operlogger.setUrl("manctrl/operlogger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
+        operlogger.setCtime(new Date());
+        operlogger.setRank(20);
+		navMenuDao.saveOrUpdate(operlogger);
+
+        TNavMenu sysmsg = new TNavMenu();
+        sysmsg.setId("sysmsg");
+        sysmsg.setParent(siteoperation);
+        sysmsg.setTitle("通知系统");
+        sysmsg.setIcon("icon-sysmessage");
+        sysmsg.setType("menu");
+        sysmsg.setLevel(2);
+        sysmsg.setTarget("link");
+        sysmsg.setUrl("SS_main_menuTree('sysmsg')");
+        sysmsg.setCtime(new Date());
+        sysmsg.setRank(30);
+        navMenuDao.saveOrUpdate(sysmsg);
+
+        TNavMenu emailsetting = new TNavMenu();
+        emailsetting.setId("emailsetting");
+        emailsetting.setParent(sysmsg);
+        emailsetting.setTitle("电子邮件");
+        emailsetting.setIcon("icon-email");
+        emailsetting.setType("tree");
+        emailsetting.setLevel(1);
+        emailsetting.setTarget("link");
+        emailsetting.setUrl("manctrl/operlogger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
+        emailsetting.setCtime(new Date());
+        emailsetting.setRank(10);
+        navMenuDao.saveOrUpdate(emailsetting);
+
+        TNavMenu smssetting = new TNavMenu();
+        smssetting.setId("smssetting");
+        smssetting.setParent(sysmsg);
+        smssetting.setTitle("手机短信");
+        smssetting.setIcon("icon-sms");
+        smssetting.setType("tree");
+        smssetting.setLevel(1);
+        smssetting.setTarget("link");
+        smssetting.setUrl("manctrl/operlogger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
+        smssetting.setCtime(new Date());
+        smssetting.setRank(20);
+        navMenuDao.saveOrUpdate(smssetting);
+
+        TNavMenu weixinsetting = new TNavMenu();
+        weixinsetting.setId("weixinsetting");
+        weixinsetting.setParent(sysmsg);
+        weixinsetting.setTitle("微信设置");
+        weixinsetting.setIcon("icon-weixin");
+        weixinsetting.setType("tree");
+        weixinsetting.setLevel(1);
+        weixinsetting.setTarget("link");
+        weixinsetting.setUrl("manctrl/operlogger.jsp");//左树节点在主窗体嵌入式打开URL    的样例
+        weixinsetting.setCtime(new Date());
+        weixinsetting.setRank(30);
+        navMenuDao.saveOrUpdate(weixinsetting);
+
+        TNavMenu usermanager = new TNavMenu();
+        usermanager.setId("usermanager");
+        usermanager.setParent(sys);
+        usermanager.setTitle("用户权限");
+        usermanager.setIcon("icon-userauth");
+        usermanager.setType("menu");
+        usermanager.setLevel(1);
+        usermanager.setTarget("link");
+        usermanager.setUrl("SS_main_menuTree('usermanager')");
+        usermanager.setCtime(new Date());
+        usermanager.setRank(30);
+        navMenuDao.saveOrUpdate(usermanager);
 
         TNavMenu chpwd = new TNavMenu();
         chpwd.setId("changepwd");
@@ -458,6 +576,8 @@ public class InitMenuServiceImpl implements InitServiceI {
         chpwd.setCtime(new Date());
         chpwd.setRank(50);
         navMenuDao.saveOrUpdate(chpwd);
+
+
 
         TNavMenu logout = new TNavMenu();
         logout.setId("logout");
@@ -477,7 +597,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         pubsite.setId("pubsite");
         pubsite.setParent(sys);
         pubsite.setTitle("前台页面");
-        pubsite.setIcon("icon-html");
+        pubsite.setIcon("icon-page");
         pubsite.setType("menu");
         pubsite.setLevel(1);
         pubsite.setTarget("link");
@@ -486,7 +606,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         pubsite.setRank(60);
         navMenuDao.saveOrUpdate(pubsite);
 
-        initUser();
+        //initUser();
     }
 
     @Override

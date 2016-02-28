@@ -1,5 +1,7 @@
 package com.baguix.web.dao;
 
+import org.hibernate.Hibernate;
+
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.List;

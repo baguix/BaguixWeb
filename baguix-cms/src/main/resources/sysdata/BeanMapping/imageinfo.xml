@@ -13,7 +13,7 @@
   <markText><![CDATA[www.baguix.com]]></markText>
   <markTextColor><![CDATA[#ff0000]]></markTextColor>
   <markTextSize>24</markTextSize>
-  <markImg><![CDATA[/upfile/sys/logo.png]]></markImg>
-  <markImgStr><![CDATA[/upfile/sys/logo.png]]></markImgStr>
+  <markImg></markImg>
+  <markImgStr></markImgStr>
   <markImgAlpha>25</markImgAlpha>
 </imageinfo>

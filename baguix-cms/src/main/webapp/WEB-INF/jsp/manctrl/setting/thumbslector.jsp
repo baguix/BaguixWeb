@@ -5,7 +5,7 @@
   <head>
     <title>图片选择器</title>
     <meta http-equiv="description" content="${applicationScope.description}">
-  	<script type="text/javascript" src="${pageContext.request.contextPath}/jslib/jquery.min.js"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath}/jslib/easyui/jquery.min.js"></script>
   	<!-- image picker -->
   	<script type="text/javascript" src="${pageContext.request.contextPath}/jslib/imagepicker/imagepicker.js"></script>
   	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jslib/imagepicker/imagepicker.css">
@@ -45,20 +45,20 @@
     
     //关闭窗口时的回调函数
     function closeEvent(method){
-    	 parent.maxdlg[0].contentWindow.setUploadImgTitle(imgname);
-    	 parent.maxdlg[0].contentWindow.getUploadImgSrc(imgsrc);
+		parent.sys_Dialog_iframe[0].contentWindow.setUploadImgTitle($("#selectpic").val());
+		parent.sys_Dialog_iframe[0].contentWindow.setUploadImgSrc(imgsrc);
     }
     
     //打开窗口时的回调程序，无法使用回调函数，此乃折中办法
     var opened,target;
     if(opened){
-    	imgname = target.contentWindow.getUploadImgTitle();
-    	imgsrc = target.contentWindow.getUploadImgSrc();
+    	imgname = parent.sys_Dialog_iframe[0].contentWindow.getUploadImgTitle();
+    	imgsrc =  parent.sys_Dialog_iframe[0].contentWindow.getUploadImgSrc();
     }
     
     //按确定按钮时的回调函数
     function okEvent(method){
-    	target.contentWindow.setThumb($("#selectpic").val());
+		parent.sys_Dialog_iframe[0].contentWindow.setThumb($("#selectpic").val());
     }
     
   	//按删除图片按钮时的回调函数

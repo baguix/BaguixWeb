@@ -29,7 +29,7 @@
     var type = 'file';
 
     // 指定缩略图的上传路径(相对于上传文件夹根目录)
-    var uploaddir = "thumb";
+    var uploaddir = "watermark";
     // 最大支持文件大小（支持b, kb, mb, gb, tb后缀）
     var max_file_size = '20mb';
     var filters = {title: "图片文件(jpg,gif,png)", extensions: "jpg,gif,png"};
@@ -67,15 +67,13 @@
         flash_swf_url : '${pageContext.request.contextPath}/jslib/plupload/Moxie.swf',
         // Silverlight settings
         silverlight_xap_url : '${pageContext.request.contextPath}/jslib/plupload/Moxie.xap',
-        uploaded:function(uploader,file,response){
-            if(response.response){
-                var rs = $.parseJSON(response.response);
-                if(rs.status){
-                    files.push(file.name);
-                    urls = rs.urls;
-                    newfiles = rs.files;
-                }else{
-                    errors.push(file.name);
+        init:{
+            FileUploaded:function(uploader,files,response){
+                if(response.response) {
+                    var rs = $.parseJSON(response.response);
+                    if(rs.success){
+                        urls = rs.urls;
+                    }
                 }
             }
         }
@@ -84,7 +82,7 @@
     //关闭窗口时的回调函数
 
     function closeEvent(method) {
-        parent.main_dialog_iframe[0].contentWindow.setThumb(urls);
+        parent.sys_Dialog_iframe[0].contentWindow.setThumb(urls);
     }
 
 </script>

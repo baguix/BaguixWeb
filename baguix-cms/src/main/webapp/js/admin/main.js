@@ -173,20 +173,20 @@ function tabmenu(m) {
     });
 }
 
-var main_Dialog;
-var main_dialog_iframe;
+var info_Dialog;
+var info_dialog_iframe;
 //SiteInfo修改对话框
-function SS_main_Dialog(caption, url, w, h) {
+function SS_siteinfo_Dialog(caption, url, w, h) {
     if (url != null) {
-        main_Dialog = $('<div style="overflow: hidden;"/>');
-        main_dialog_iframe = $('<iframe/>');
-        main_dialog_iframe.attr({
+        info_Dialog = $('<div style="overflow: hidden;"/>');
+        info_dialog_iframe = $('<iframe/>');
+        info_dialog_iframe.attr({
             'src': url,
             width: '100%',
             height: '100%',
             frameborder: '0'
         });
-        main_Dialog.dialog({
+        info_Dialog.dialog({
             title: caption,
             height: h,
             width: w,
@@ -194,31 +194,137 @@ function SS_main_Dialog(caption, url, w, h) {
             collapsible: false,
             maximizable: false,
             resizable: false,
-            content: main_dialog_iframe,
+            content: info_dialog_iframe,
             buttons: [{
                 text: '确定',
                 iconCls: 'icon-confirm',
                 handler: function () {
-                    var fw = GetFrameWindow(main_dialog_iframe[0]);
+                    var fw = GetFrameWindow(info_dialog_iframe[0]);
                     fw.okEvent();
-                    main_Dialog.dialog('close');
+                    info_Dialog.dialog('close');
                 }
             },
                 {
                     text: '取消',
                     iconCls: 'icon-cancel',
                     handler: function () {
-                        main_Dialog.dialog('close');
+                        info_Dialog.dialog('close');
                     }
                 }],
             onClose: function () {
-                var fw = GetFrameWindow(main_dialog_iframe[0]);
+                var fw = GetFrameWindow(info_dialog_iframe[0]);
                 fw.closeEvent();
             },
             onOpen: function () {
                 var target = $(this);
                 setTimeout(function () {
-                    var fw = GetFrameWindow(main_dialog_iframe[0]);
+                    var fw = GetFrameWindow(info_dialog_iframe[0]);
+                    fw.target = target;
+                }, 100);
+            }
+        });
+    }
+}
+
+var img_Dialog;
+var img_dialog_iframe;
+//ImgInfo修改对话框
+function SS_img_Dialog(caption, url, w, h) {
+    if (url != null) {
+        img_Dialog = $('<div style="overflow: hidden;"/>');
+        img_Dialog_iframe = $('<iframe/>');
+        img_Dialog_iframe.attr({
+            'src': url,
+            width: '100%',
+            height: '100%',
+            frameborder: '0'
+        });
+        img_Dialog.dialog({
+            title: caption,
+            height: h,
+            width: w,
+            modal: true,
+            collapsible: false,
+            maximizable: false,
+            resizable: false,
+            content: img_Dialog_iframe,
+            buttons: [{
+                text: '确定',
+                iconCls: 'icon-confirm',
+                handler: function () {
+                    var fw = GetFrameWindow(img_Dialog_iframe[0]);
+                    fw.okEvent();
+                    img_Dialog.dialog('close');
+                }
+            },
+                {
+                    text: '取消',
+                    iconCls: 'icon-cancel',
+                    handler: function () {
+                        img_Dialog.dialog('close');
+                    }
+                }],
+            onClose: function () {
+                var fw = GetFrameWindow(img_Dialog_iframe[0]);
+                fw.closeEvent();
+            },
+            onOpen: function () {
+                var target = $(this);
+                setTimeout(function () {
+                    var fw = GetFrameWindow(img_Dialog_iframe[0]);
+                    fw.target = target;
+                }, 100);
+            }
+        });
+    }
+}
+
+var sys_Dialog;
+var sys_dialog_iframe;
+//ImgInfo修改对话框
+function SS_sys_Dialog(caption, url, w, h) {
+    if (url != null) {
+        sys_Dialog = $('<div style="overflow: hidden;"/>');
+        sys_Dialog_iframe = $('<iframe/>');
+        sys_Dialog_iframe.attr({
+            'src': url,
+            width: '100%',
+            height: '100%',
+            frameborder: '0'
+        });
+        sys_Dialog.dialog({
+            title: caption,
+            height: h,
+            width: w,
+            modal: true,
+            collapsible: false,
+            maximizable: false,
+            resizable: false,
+            content: sys_Dialog_iframe,
+            buttons: [{
+                text: '确定',
+                iconCls: 'icon-confirm',
+                handler: function () {
+                    var fw = GetFrameWindow(sys_Dialog_iframe[0]);
+                    fw.okEvent();
+                    sys_Dialog.dialog('close');
+                }
+            },
+                {
+                    text: '取消',
+                    iconCls: 'icon-cancel',
+                    handler: function () {
+                        sys_Dialog.dialog('close');
+                    }
+                }],
+            onClose: function () {
+                var fw = GetFrameWindow(sys_Dialog_iframe[0]);
+                fw.closeEvent();
+            },
+            onOpen: function () {
+                var target = $(this);
+                setTimeout(function () {
+                    var fw = GetFrameWindow(sys_Dialog_iframe[0]);
                     fw.target = target;
                 }, 100);
             }

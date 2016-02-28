@@ -577,3 +577,125 @@
 [INFO][2015-12-24 04:57:01,979][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
 [INFO][2015-12-24 04:57:01,980][ÏµÍ³ÏûÏ¢] ...
 [INFO][2015-12-24 04:57:01,980][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-08 22:07:46,003][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:07:46,004][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:07:46,007][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:07:46,007][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:10:33,327][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:10:33,328][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:10:33,331][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:10:33,331][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:12:25,526][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:12:25,526][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:12:25,529][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:12:25,529][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:26:23,879][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:26:23,880][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:26:23,882][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:26:23,882][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:29:37,788][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:29:37,788][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:29:37,789][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-08 22:29:37,789][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-08 22:30:00,002][com.baguix.web.common.scheduler.QuartzJob] Quartzè®¡åˆ’ä»»åŠ¡ã€‚2016-02-08 22:30:00
+[DEBUG][2016-02-08 22:47:05,372][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æoverviewÊı¾İ¡£
+[DEBUG][2016-02-08 22:47:05,372][»º´æ¼ÓÔØ] overview»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 22:47:05,376][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æsiteinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:47:05,376][»º´æ¼ÓÔØ] siteinfo»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 22:47:24,069][com.baguix.web.action.manctrl.AdminMainAct] post=ÑéÖ¤Âë code=damy
+[INFO][2016-02-08 22:47:24,363][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 22:47:28,521][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 22:47:29,570][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:47:35,927][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[DEBUG][2016-02-08 22:47:45,263][com.baguix.web.action.manctrl.SiteConfigAct] ÏµÍ³ÖØĞÂ»º´æÁËimageinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:49:14,162][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:49:27,020][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:49:40,834][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 22:50:00,005][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 22:50:00
+[DEBUG][2016-02-08 22:50:38,729][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:50:42,438][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 22:50:46,792][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[DEBUG][2016-02-08 22:50:55,368][com.baguix.web.action.manctrl.SiteConfigAct] ÏµÍ³ÖØĞÂ»º´æÁËimageinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:50:57,273][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:51:05,179][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[INFO][2016-02-08 22:51:24,210][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
+[INFO][2016-02-08 22:51:24,211][ÏµÍ³ÏûÏ¢] ...
+[INFO][2016-02-08 22:51:24,211][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-08 22:52:28,762][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æoverviewÊı¾İ¡£
+[DEBUG][2016-02-08 22:52:28,762][»º´æ¼ÓÔØ] overview»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 22:52:28,765][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æsiteinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:52:28,765][»º´æ¼ÓÔØ] siteinfo»º´æ³É¹¦£¡
+[INFO][2016-02-08 22:52:40,416][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 22:52:47,341][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 22:52:48,607][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:52:54,472][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 22:53:01,823][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[DEBUG][2016-02-08 22:53:10,202][com.baguix.web.action.manctrl.SiteConfigAct] ÏµÍ³ÖØĞÂ»º´æÁËimageinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:53:12,324][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:53:16,198][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 22:55:00,006][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 22:55:00
+[INFO][2016-02-08 22:55:20,585][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
+[INFO][2016-02-08 22:55:20,585][ÏµÍ³ÏûÏ¢] ...
+[INFO][2016-02-08 22:55:20,585][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-08 22:57:47,987][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æoverviewÊı¾İ¡£
+[DEBUG][2016-02-08 22:57:47,987][»º´æ¼ÓÔØ] overview»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 22:57:47,991][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æsiteinfoÊı¾İ¡£
+[DEBUG][2016-02-08 22:57:47,991][»º´æ¼ÓÔØ] siteinfo»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 22:59:45,439][com.baguix.web.action.manctrl.AdminMainAct] post=ÑéÖ¤Âë code=ya23
+[INFO][2016-02-08 22:59:45,637][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 22:59:49,726][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 22:59:51,160][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 22:59:56,030][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[DEBUG][2016-02-08 23:00:00,004][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 23:00:00
+[DEBUG][2016-02-08 23:00:04,750][com.baguix.web.action.manctrl.SiteConfigAct] ÏµÍ³ÖØĞÂ»º´æÁËimageinfoÊı¾İ¡£
+[DEBUG][2016-02-08 23:00:06,814][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 23:00:10,290][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 23:01:28,754][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[INFO][2016-02-08 23:03:47,022][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
+[INFO][2016-02-08 23:03:47,022][ÏµÍ³ÏûÏ¢] ...
+[INFO][2016-02-08 23:03:47,022][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-08 23:07:00,652][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æoverviewÊı¾İ¡£
+[DEBUG][2016-02-08 23:07:00,652][»º´æ¼ÓÔØ] overview»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 23:07:00,655][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æsiteinfoÊı¾İ¡£
+[DEBUG][2016-02-08 23:07:00,655][»º´æ¼ÓÔØ] siteinfo»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 23:10:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 23:10:00
+[INFO][2016-02-08 23:13:04,859][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
+[INFO][2016-02-08 23:13:04,859][ÏµÍ³ÏûÏ¢] ...
+[INFO][2016-02-08 23:13:04,859][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-08 23:26:59,547][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æoverviewÊı¾İ¡£
+[DEBUG][2016-02-08 23:26:59,547][»º´æ¼ÓÔØ] overview»º´æ³É¹¦£¡
+[DEBUG][2016-02-08 23:26:59,550][»º´æ¼ÓÔØ] ÏµÍ³ApplicationÓò¼´½«»º´æsiteinfoÊı¾İ¡£
+[DEBUG][2016-02-08 23:26:59,550][»º´æ¼ÓÔØ] siteinfo»º´æ³É¹¦£¡
+[INFO][2016-02-08 23:28:53,964][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 23:28:59,673][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 23:29:00,747][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 23:30:00,007][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 23:30:00
+[INFO][2016-02-08 23:34:05,238][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 23:34:08,900][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 23:34:09,841][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[INFO][2016-02-08 23:34:24,197][com.baguix.web.action.manctrl.AdminMainAct] ÓÃ»§À´·Ã
+[DEBUG][2016-02-08 23:34:31,811][com.baguix.web.common.db.DataSourceAspect] 1Ê¹ÓÃÊı¾İÔ´£ºslave
+[DEBUG][2016-02-08 23:34:32,609][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 23:34:39,320][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 23:34:42,310][com.baguix.web.action.manctrl.SiteConfigAct] logoUpload
+[DEBUG][2016-02-08 23:34:53,325][com.baguix.web.action.manctrl.SiteConfigAct] ÏµÍ³ÖØĞÂ»º´æÁËimageinfoÊı¾İ¡£
+[DEBUG][2016-02-08 23:34:54,676][com.baguix.web.action.manctrl.SiteConfigAct] imageinfo
+[DEBUG][2016-02-08 23:34:59,248][com.baguix.web.action.manctrl.SiteConfigAct] logoSlector
+[DEBUG][2016-02-08 23:35:00,009][com.baguix.web.common.scheduler.QuartzJob] Quartz¼Æ»®ÈÎÎñ¡£2016-02-08 23:35:00
+[INFO][2016-02-08 23:35:13,571][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷¿ªÊ¼£º
+[INFO][2016-02-08 23:35:13,571][ÏµÍ³ÏûÏ¢] ...
+[INFO][2016-02-08 23:35:13,571][ÏµÍ³ÏûÏ¢] Ïú»Ù²Ù×÷½áÊø£¡
+[DEBUG][2016-02-09 06:37:06,412][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-09 06:37:06,413][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-09 06:37:06,415][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-09 06:37:06,415][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-09 06:39:09,288][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-09 06:39:09,288][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-09 06:39:09,290][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-09 06:39:09,291][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-09 06:40:00,003][com.baguix.web.common.scheduler.QuartzJob] Quartzè®¡åˆ’ä»»åŠ¡ã€‚2016-02-09 06:40:00
+[DEBUG][2016-02-09 06:45:00,008][com.baguix.web.common.scheduler.QuartzJob] Quartzè®¡åˆ’ä»»åŠ¡ã€‚2016-02-09 06:45:00
+[DEBUG][2016-02-09 07:03:26,342][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜overviewæ•°æ®ã€‚
+[DEBUG][2016-02-09 07:03:26,342][ç¼“å­˜åŠ è½½] overviewç¼“å­˜æˆåŠŸï¼
+[DEBUG][2016-02-09 07:03:26,344][ç¼“å­˜åŠ è½½] ç³»ç»ŸApplicationåŸŸå³å°†ç¼“å­˜siteinfoæ•°æ®ã€‚
+[DEBUG][2016-02-09 07:03:26,344][ç¼“å­˜åŠ è½½] siteinfoç¼“å­˜æˆåŠŸï¼

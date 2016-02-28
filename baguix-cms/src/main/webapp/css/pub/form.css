@@ -1,0 +1,18 @@
+table.gridtable {
+    font-family: "微软雅黑",verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border: 1px #666666;
+    border-collapse: collapse;
+}
+table.gridtable td.ct {
+    padding: 8px;
+    border: 1px dotted  #ccc;
+    background-color: #EFEFEF;
+    width:20%;
+}
+table.gridtable td {
+    padding: 8px;
+    border: 1px dotted #ccc;
+    background-color: #ffffff;
+}
