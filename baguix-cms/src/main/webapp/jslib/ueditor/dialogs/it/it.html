@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <script type="text/javascript" src="../internal.js"></script>
+    <link rel="stylesheet" type="text/css" href="it.css">
+</head>
+<body>
+<div id="tabPanel" class="wrapper">
+    <div id="tabHeads" class="tabhead">
+        <span><var id="lang_input_word"></var></span>
+        <span><var id="lang_input_excel"></var></span>
+        <span><var id="lang_input_vb"></var></span>
+        <span><var id="lang_input_ie"></var></span>
+        <span><var id="lang_input_key"></var></span>
+        <span><var id="lang_input_other"></var></span>
+    </div>
+    <div id="tabBodys" class="tabbody">
+        <div id="tab0"></div>
+        <div id="tab1"></div>
+        <div id="tab2"></div>
+        <div id="tab3"></div>
+        <div id="tab4"></div>
+        <div id="tab5"></div>
+    </div>
+</div>
+<div id="tabIconReview">
+    <img id='faceReview' class='review' src="../../themes/default/images/spacer.gif"/>
+</div>
+<script type="text/javascript" src="it.js"></script>
+<script type="text/javascript">
+    var it = {
+        //切换面板数量
+        tabNum:6,
+        //[图片前缀名, 该tab的图片数]，图片前缀名，"0"则001,002;"00"则0001,0002。
+        SmilmgName:{ tab0:['0', 24], tab1:['0', 16], tab2:['0', 7], tab3:['0', 4], tab4:['0', 6], tab5:['0', 2]},
+        //图片在dialogs/it/images中的对应文件夹路径
+        imageFolders:{ tab0:'word/', tab1:'excel/', tab2:'vb/', tab3:'ie/', tab4:'key/', tab5:'other/'},
+        //图片css类名
+        imageCss:{tab0:'word', tab1:'excel', tab2:'vb', tab3:'ie', tab4:'key', tab5:'other'},
+        //图片偏移
+        imageCssOffset:{tab0:24, tab1:24, tab2:24, tab3:24, tab4:24, tab5:24},
+        //图片说明
+        SmileyInfor:{
+            tab0:['新建', '保存', '打开', '剪切', '复制', '粘贴', '查找', '打印预览', '两端对齐', '居中对齐','插入艺术字','合并单元格','拆分单元格','文字环绕','嵌入型（小）', '四周型（小）', '紧密型（小）', '浮于文字上方（小）', '衬于文字下方（小）','嵌入型（大）', '四周型（大）', '紧密型（大）', '浮于文字上方（大）', '衬于文字下方（大）'],
+            tab1:['合并及居中', '自动求和', '货币样式', '百分比样式', '图表', '输入', '升序', '降序', '减少小数位数', '增加小数位数', '柱形图', '条形图', '饼图-1', '饼图-2', '折线图', '面积图'],
+            tab2:['标签', '文本框', '命令按钮', '计时器', '框架', '启动', '结束'],
+            tab3:['主页', '刷新', '收藏夹', '停止'],
+            tab4:['<,', '>.', '?/', '|\\', '^6', '@2'],
+            tab5:['向上', '删除']
+        }
+    };
+</script>
+</body>
+</html>

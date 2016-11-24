@@ -1,0 +1,15 @@
+.panel-header {
+  background-color: #FFFFFF;
+  background: -webkit-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+  background: -moz-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+  background: -o-linear-gradient(top,#FFFFFF 0,#E0ECFF 100%);
+  background: linear-gradient(to bottom,#FFFFFF 0,#E0ECFF 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#E0ECFF,GradientType=0);
+}
+
+.tabs-tool{
+ border:0;
+ border-left:1px solid #95B8E7;
+ border-bottom:1px solid #95B8E7;
+}

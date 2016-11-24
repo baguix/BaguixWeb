@@ -1901,3 +1901,34 @@ div.edui-box {
 .edui-default  .edui-pastecontainer .edui-button  .edui-state-hover .edui-plaintxticon{
     background-position: -72px -34px;
 }
+/*信息技术学科工具箱按钮及弹出菜单*/
+/*去除了表情的下拉箭头*/
+.edui-default .edui-for-it .edui-icon {
+    background-position: -752px -76px;
+}
+
+
+.edui-default .edui-for-it .edui-popup-content iframe
+{
+    width: 514px;
+    height: 380px;
+    overflow: hidden;
+}
+.edui-default .edui-for-it .edui-popup-content
+{
+    position: relative;
+    z-index: 555
+}
+
+.edui-default .edui-for-it .edui-splitborder {
+    display: none
+}
+
+.edui-default .edui-for-it .edui-splitbutton-body .edui-arrow
+{
+    width: 0
+}
+.edui-default .edui-toolbar .edui-for-it  .edui-state-active .edui-splitborder
+{
+    border-left: 1px solid transparent;
+}

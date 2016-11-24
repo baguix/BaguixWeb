@@ -39,8 +39,8 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TAnnouncement> impl
 		TAnnouncement t = new TAnnouncement();
 		BeanUtils.copyProperties(art, t);
 		t.setId(UUID.randomUUID().toString());
-		t.setCtime(new Date());
-		t.setMtime(new Date());
+		t.getCommon().setCtime(new Date());
+		t.getCommon().setMtime(new Date());
 		dao.save(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent(null);
@@ -80,7 +80,7 @@ public class AnnouncementServiceImpl extends BaseServiceImpl<TAnnouncement> impl
 	synchronized public Article edit(Article art) {
 		TAnnouncement t = new TAnnouncement();
 		BeanUtils.copyProperties(art, t);
-		t.setMtime(new Date());
+		t.getCommon().setMtime(new Date());
 		dao.saveOrUpdate(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent(null);

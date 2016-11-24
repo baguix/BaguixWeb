@@ -606,7 +606,9 @@ public class InitMenuServiceImpl implements InitServiceI {
         pubsite.setRank(60);
         navMenuDao.saveOrUpdate(pubsite);
 
+
         //initUser();
+
     }
 
     @Override
@@ -733,4 +735,7 @@ public class InitMenuServiceImpl implements InitServiceI {
         ur.setUser(user);
         userroleDao.saveOrUpdate(ur);
     }
+
+
+
 }

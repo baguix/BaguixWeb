@@ -2,13 +2,13 @@
 <application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com"
              xsi:schemaLocation="http://www.zeroturnaround.com rebel-2_0.xsd">
     <classpath>
-        <dir name="D:\baguix\IdeaProjects\BaguixWeb\target\cms\WEB-INF\classes">
+        <dir name="D:\baguix\baguix\IdeaProjects\BaguixWeb\target\cms\WEB-INF\classes">
         </dir>
     </classpath>
     <web>
         <link target="/">
             <!-- <dir name="D:/baguix/IdeaProjects/BaguixWeb/baguix-cms/src/main/webapp">-->
-            <dir name="D:\baguix\IdeaProjects\BaguixWeb\target\cms">
+            <dir name="D:\baguix\baguix\IdeaProjects\BaguixWeb\target\cms">
             </dir>
         </link>
     </web>

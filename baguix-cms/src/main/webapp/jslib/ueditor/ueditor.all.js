@@ -27675,6 +27675,7 @@ UE.ui = baidu.editor.ui = {};
         'help':'~/dialogs/help/help.html',
         'preview':'~/dialogs/preview/preview.html',
         'emotion':'~/dialogs/emotion/emotion.html',
+        'it':'~/dialogs/it/it.html',
         'wordimage':'~/dialogs/wordimage/wordimage.html',
         'attachment':'~/dialogs/attachment/attachment.html',
         'insertframe':'~/dialogs/insertframe/insertframe.html',
@@ -28418,6 +28419,23 @@ UE.ui = baidu.editor.ui = {};
         });
         return ui;
     };
+    // 信息技术工具箱
+    editorui["it"] = function (editor, iframeUrl) {
+        var cmd = "it";
+        var ui = new editorui.MultiMenuPop({
+            title:editor.options.labelMap[cmd] || editor.getLang("labelMap." + cmd + "") || '',
+            editor:editor,
+            className:'edui-for-' + cmd,
+            iframeUrl:editor.ui.mapUrl(iframeUrl || (editor.options.iframeUrlMap || {})[cmd] || iframeUrlMap[cmd])
+        });
+        editorui.buttons[cmd] = ui;
+
+        editor.addListener('selectionchange', function () {
+            ui.setDisabled(editor.queryCommandState(cmd) == -1)
+        });
+        return ui;
+    };
+
 
     // 表情
     editorui["emotion"] = function (editor, iframeUrl) {

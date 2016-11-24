@@ -164,6 +164,9 @@ public class DictServiceImpl extends BaseServiceImpl<TDict> implements DictServi
 		if(dict.getType().equals("MultiComboTree")){
 			value= dt.getMultiComboTreeCode(dict.getId());
 		}
+		if(dict.getType().equals("Tags")){
+			value= dt.getTagEditorCode(dict.getId());
+		}
 		SysData.dictMap.put(name, value);
 	}
 

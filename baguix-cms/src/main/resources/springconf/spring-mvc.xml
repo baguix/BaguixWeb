@@ -35,6 +35,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
        <mvc:resources mapping="/ueditor/jsp/upload/**" location="/ueditor/jsp/upload/" cache-period="3600"/>
        <mvc:resources mapping="/css/**" location="/css/" cache-period="3600"/>
        <mvc:resources mapping="/fonts/**" location="/fonts/" cache-period="3600"/>
+       <mvc:resources mapping="/tk/**" location="/tk/" cache-period="3600"/>
        <mvc:resources mapping="/favicon.ico" location="/favicon.ico" cache-period="3600"/>
 
        <!-- 视图解析器ViewResolver -->
@@ -55,18 +56,26 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
        <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
               <property name="config">
                      <bean class="com.google.code.kaptcha.util.Config">
+                            <!-- 所有的参数都可以参考com.google.code.kaptcha.util.Config的代码 -->
                             <constructor-arg>
                                    <props>
                                           <prop key="kaptcha.border">yes</prop>
-                                          <prop key="kaptcha.border.color">105,179,90</prop>
-                                          <prop key="kaptcha.textproducer.font.color">blue</prop>
-                                          <prop key="kaptcha.image.width">250</prop>
-                                          <prop key="kaptcha.textproducer.font.size">90</prop>
-                                          <prop key="kaptcha.image.height">90</prop>
+                                          <prop key="kaptcha.border.color">0,0,0</prop>
+                                          <prop key="kaptcha.textproducer.font.color">255,255,255</prop>
+                                          <prop key="kaptcha.noise.color">200,200,200</prop>
+                                          <prop key="kaptcha.background.clear.from">0,51,102</prop>
+                                          <prop key="kaptcha.background.clear.to">0,51,102</prop>
+                                          <prop key="kaptcha.image.width">100</prop>
+                                          <prop key="kaptcha.image.height">30</prop>
+                                          <prop key="kaptcha.textproducer.font.size">20</prop>
                                           <prop key="kaptcha.session.key">baguix</prop>
                                           <prop key="kaptcha.textproducer.char.length">4</prop>
-                                          <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                                          <prop key="kaptcha.textproducer.font.names">微软雅黑</prop>
                                           <prop key="kaptcha.textproducer.char.string.">0123456789</prop>
+                                          <prop key="kaptcha.textproducer.impl">com.baguix.web.common.kaptcha.ChineseText</prop>
+                                          <prop key="kaptcha.obscurificator.impl">com.google.code.kaptcha.impl.WaterRipple</prop>
+                                          <!-- <prop key="kaptcha.noise.impl">com.google.code.kaptcha.impl.NoNoise</prop>除去干扰线 -->
+                                          <prop key="kaptcha.noise.impl">com.baguix.web.common.kaptcha.DotNoice</prop><!-- 自定义干扰线 -->
                                    </props>
                             </constructor-arg>
                      </bean>

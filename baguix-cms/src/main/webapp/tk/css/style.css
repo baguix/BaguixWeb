@@ -1,0 +1,52 @@
+* {
+	font-family: "微软雅黑";
+}
+
+.toolbar {
+	padding: 10px;
+	text-align: right;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+.hline {
+	height: 0px;
+	border-bottom: 1px dotted #ccc;
+	clear:both;
+}
+
+.hline_blank10 {
+	height: 10px;
+	clear:both;
+}
+
+.label {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+table.formtable {
+    font-family: "微软雅黑",verdana,arial,sans-serif;
+    font-size:11px;
+    color:#000;
+    border: 1px #ccc;
+    border-collapse: collapse;
+}
+table.formtable th {
+	font-size: 15px;
+	font-weight: bold;
+    padding: 8px;
+    border: 1px dotted #ccc;
+    width:20%;
+}
+table.formtable td {
+    padding: 8px;
+    border: 1px dotted #ccc;
+}

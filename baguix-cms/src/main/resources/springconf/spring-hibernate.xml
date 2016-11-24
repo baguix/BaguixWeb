@@ -170,6 +170,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 				<value>com.baguix.web.model.db.core</value>
 				<value>com.baguix.web.model.db.manctrl</value>
 				<value>com.baguix.web.model.db.cms</value>
+				<value>com.baguix.web.model.db.exam</value>
 			</list>
 		</property>
 
@@ -184,10 +185,10 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<!-- 注解方式配置事物 -->
+	<!-- 注解方式配置事务 -->
 	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 
-	<!-- 拦截器方式配置事物 -->
+	<!-- 拦截器方式配置事务 -->
 	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="add*" propagation="REQUIRED"/>
@@ -231,4 +232,5 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>
+
 </beans>

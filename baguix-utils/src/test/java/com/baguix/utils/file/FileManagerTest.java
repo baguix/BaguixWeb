@@ -47,7 +47,7 @@ public class FileManagerTest {
     /**
      * Method: getFileSeparator()
      */
-    @Test
+   @Ignore
     public void testGetFileSeparator() throws Exception {
         String OS = System.getProperty("os.name").toLowerCase();
         if (OS.indexOf("windows") >= 0 || OS.indexOf("dos") >= 0) {
@@ -68,7 +68,7 @@ public class FileManagerTest {
     /**
      * Method: newFolder(String path)
      */
-    @Test
+   @Ignore
     public void testNewFolderPath() throws Exception {
         //fm.newFolder("C:\\test1\\dsds\\cc");
         FileManager.newFolder(basepath + separator + "test1" + separator + "dsds" + separator + "dd1");
@@ -77,7 +77,7 @@ public class FileManagerTest {
     /**
      * Method: newTextFile(String filePathAndName, String fileContent)
      */
-    @Test
+   @Ignore
     public void testNewTextFile() throws Exception {
         // see setUp
     }
@@ -85,7 +85,7 @@ public class FileManagerTest {
     /**
      * Method: readStrFromFile(String file)
      */
-    @Test
+   @Ignore
     public void testReadStrFromFile() throws Exception {
         String file = basepath + separator + "test1" + separator + "dsds" + separator + "测试内容.txt";
         String content = "测试内容";
@@ -103,7 +103,7 @@ public class FileManagerTest {
     /**
      * Method: delFile(String file)
      */
-    @Test
+   @Ignore
     public void testDelFile() throws Exception {
         String file = basepath + separator + "test1" + separator + "dsds" + separator + "测试内容UTF8.txt";
         FileManager.delFile(file);
@@ -114,7 +114,7 @@ public class FileManagerTest {
     /**
      * Method: cleanFolder(String path)
      */
-    @Test
+   @Ignore
     public void testCleanFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         FileManager.cleanFolder(path);
@@ -135,7 +135,7 @@ public class FileManagerTest {
     /**
      * Method: delFolder(String path)
      */
-    @Test
+   @Ignore
     public void testDelFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         FileManager.delFolder(path);
@@ -146,7 +146,7 @@ public class FileManagerTest {
     /**
      * Method: List<File> listFileFromFolder(String path)
      */
-    @Test
+   @Ignore
     public void testListFileFromFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         List<File> list = FileManager.listFileFromFolder(path);
@@ -161,7 +161,7 @@ public class FileManagerTest {
     /**
      * Method: List<String> listFileNameFromFolder(String path)
      */
-    @Test
+   @Ignore
     public void testlistFileNameFromFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         List<String> list = FileManager.listFileNameFromFolder(path);
@@ -176,7 +176,7 @@ public class FileManagerTest {
     /**
      * Method: List<String> listFolderAndFileFromFolder(File path, List<String> list)
      */
-    @Test
+   @Ignore
     public void testListFolderAndFileFromFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         List<String> list = FileManager.listFolderAndFileFromFolder(new File(path));
@@ -192,7 +192,7 @@ public class FileManagerTest {
     /**
      * Method: List<String> listAllFolderAndFileFromFolder(File path, List<String> list)
      */
-    @Test
+   @Ignore
     public void testListAllFolderAndFileFromFolder() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         List<String> list = new ArrayList<String>();
@@ -212,7 +212,7 @@ public class FileManagerTest {
     /**
      * Method: copyFile(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testCopyFile() throws Exception {
         String path = basepath + separator + "test1" + separator + "dsds";
         String oldfile = path + separator + "测试内容UTF8.txt";
@@ -241,7 +241,7 @@ public class FileManagerTest {
     /**
      * Method: copyFolder(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testCopyFolder() throws Exception {
         String oldpath = basepath + separator + "test1" + separator + "dsds";
         String newpath = basepath + separator + "test1" + separator + "dsds1";
@@ -259,7 +259,7 @@ public class FileManagerTest {
     /**
      * Method: moveFile(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testMoveFile() throws Exception {
         String oldpath = basepath + separator + "test1" + separator + "dsds" + separator + "cc.txt";
         String newpath = basepath + separator + "test1" + separator + "ss" + separator + "dd.txt";
@@ -273,7 +273,7 @@ public class FileManagerTest {
     /**
      * Method: moveFolder(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testMoveFolder() throws Exception {
         String oldpath = basepath + separator + "test1" + separator + "dsds";
         String newpath = basepath + separator + "test1" + separator + "ss";
@@ -292,7 +292,7 @@ public class FileManagerTest {
     /**
      * Method: getFileMd5(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testGetFileMd5() throws Exception {
         File file = new File(basepath + separator + "test1" + separator + "dsds" + separator + "cc.txt");
         String  md5 = FileManager.getFileMd5(file);
@@ -302,7 +302,7 @@ public class FileManagerTest {
     /**
      * Method: getFileSha1(String oldpath, String newpath)
      */
-    @Test
+   @Ignore
     public void testGetFileSha1() throws Exception {
         File file = new File(basepath + separator + "test1" + separator + "dsds" + separator + "cc.txt");
         String  sha1 = FileManager.getFileSha1(file);

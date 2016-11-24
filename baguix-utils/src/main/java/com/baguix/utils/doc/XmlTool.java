@@ -330,7 +330,7 @@ public class XmlTool {
      * @return Map对象
      */
     public static Map<String,String> xml2Map(InputStream is) {
-        Map<String,String> result = new HashMap();
+        Map<String,String> result = new HashMap<>();
         try {
             SAXBuilder sb = new SAXBuilder();
             Document doc = sb.build(is);

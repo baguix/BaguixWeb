@@ -10,6 +10,7 @@ import com.baguix.utils.file.FileManager;
 import com.baguix.utils.file.PathTool;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -192,14 +193,16 @@ public class ImageInfo {
     }
 
     /**
-     * <b>把siteinfo转为Map</b><br>
+     * <b>把ImageInfo转为Map</b><br>
      *
-     * @param si SiteInfo实例
+     * @param ii ImageInfo
      * @return 返回Map(String, String)
      */
-    public Map<String, String> toHashMap(ImageInfo si) {
+    public Map<String, String> toHashMap(ImageInfo ii) {
+        Map<String, String> map = new HashMap<>();
         ReflectTool<ImageInfo> rt = new ReflectTool<>();
-        return rt.simpleBean2Map(si);
+        map = rt.simpleBean2Map(ii);
+        return map;
     }
 
     /**

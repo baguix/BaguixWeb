@@ -6,6 +6,8 @@
 package com.baguix.web.listener;
 
 import com.baguix.web.common.cache.SysData;
+import com.baguix.web.common.db.FlywayMigrate;
+import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
@@ -49,6 +51,7 @@ public class StartUpTask implements ApplicationListener<ContextRefreshedEvent> {
      * <b>Spring单次任务</b><br>
      */
     private void run(ContextRefreshedEvent evt) {
+
         logger.info("系统菜单数据修复中...");
         InitServiceI navMenuService = (InitServiceI) evt.getApplicationContext().getBean("initMenuService");
         navMenuService.repair();
@@ -76,5 +79,14 @@ public class StartUpTask implements ApplicationListener<ContextRefreshedEvent> {
         InitServiceI newsService = (InitServiceI) evt.getApplicationContext().getBean("initNewsService");
         newsService.repair();
         logger.info("网站新闻数据修复完毕.");
+
+        logger.info("测试数据库数据修复中...");
+
+
+        Flyway flyway = new Flyway();
+        flyway.setDataSource("jdbc:mysql://localhost:3306/sys?" +
+                "useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull", "root", "");
+        flyway.migrate();
+        logger.info("测试数据库数据修复完毕.");
     }
 }

@@ -501,6 +501,16 @@ UE.I18N['zh-cn'] = {
             'lang_next_btn': '下一个'
         }
     },
+    'it':{
+        'static':{
+            'lang_input_key':'键盘',
+            'lang_input_word':'Word',
+            'lang_input_excel':'Excel',
+            'lang_input_vb':'VB',
+            'lang_input_ie':'IE',
+            'lang_input_other':'其他'
+        }
+    },
     'emotion':{
         'static':{
             'lang_input_choice':'精选',

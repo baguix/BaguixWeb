@@ -1,0 +1,11 @@
+#logo{
+	color: #00438A;
+	font-weight: bold;
+}
+#logo>.title {
+	font-size: 26px;
+}
+
+#logo>.ver {
+	font-size: 14px;
+}

@@ -20,7 +20,7 @@ import org.hibernate.annotations.Proxy;
  */
 
 @Entity
-@Table(name = "SS_DICTITEM", schema = "")
+@Table(name = "SS_CORE_DICTITEM", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
 

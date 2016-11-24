@@ -148,8 +148,10 @@ public class SiteInfo {
      * @return 返回Map(String, String)
      */
     public Map<String, String> toHashMap(SiteInfo si) {
+        Map<String, String> map = new HashMap<>();
         ReflectTool<SiteInfo> rt = new ReflectTool<>();
-        return rt.simpleBean2Map(si);
+        map = rt.simpleBean2Map(si);
+        return map;
     }
 
     /**

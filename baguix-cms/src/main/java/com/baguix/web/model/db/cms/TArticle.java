@@ -3,6 +3,7 @@
  */
 package com.baguix.web.model.db.cms;
 
+import com.baguix.web.model.db.core.ECommonField;
 import com.baguix.web.model.enums.StateType;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -21,7 +22,7 @@ import java.util.UUID;
  */
 
 @Entity
-@Table(name = "SS_ARTICLE", schema = "")
+@Table(name = "SS_CMS_ARTICLE", schema = "")
 //继承影射,子类对应同一张表
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(
@@ -82,19 +83,10 @@ public abstract class TArticle implements Serializable {
     //属性
     private String proper;
     //============================公共字段============================
-    //排序值
-    private int rank;
-    //创建时间
-    private Date ctime;
-    //修改时间
-    private Date mtime;
-    //显示状态
-    private StateType state;
-
+    private ECommonField common;
 
     //无参数的构造器
     public TArticle() {
-        this.ctime = new Date();
     }
 
     //Setter && Getter
@@ -335,43 +327,13 @@ public abstract class TArticle implements Serializable {
         this.proper = proper;
     }
 
-    @Column(name = "ARTICLE_RANK", length = 20)
-    public int getRank() {
-        return rank;
+    @Embedded
+    public ECommonField getCommon() {
+        return common;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
-    }
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "ARTICLE_CTIME")
-    public Date getCtime() {
-        return ctime;
-    }
-
-    public void setCtime(Date ctime) {
-        this.ctime = ctime;
-    }
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "APPDICT_MTIME")
-    public Date getMtime() {
-        return mtime;
-    }
-
-    public void setMtime(Date mtime) {
-        this.mtime = mtime;
-    }
-
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name = "ARTICLE_STATE")
-    public StateType getState() {
-        return state;
-    }
-
-    public void setState(StateType state) {
-        this.state = state;
+    public void setCommon(ECommonField common) {
+        this.common = common;
     }
 }
 

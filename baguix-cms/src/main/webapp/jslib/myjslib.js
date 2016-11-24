@@ -1,6 +1,6 @@
 /**
  * 截取中间字符串
- * 示例: var value = "addTabHref(%www.baidu.com%)";
+ * 示例: var value = "SS_cutString(%www.baidu.com%)";
  * var u = SS_cutString(value, "addTabHref(%", "%)");
  * u=www.baidu.com
  */
@@ -10,6 +10,20 @@ function SS_cutString(str, begin, end){
 	return value;
 }
 
+/**
+ * 截取字符串做摘要
+ * 示例: var value = "addTabHref(%www.baidu.com%)";
+ * var u = SS_cutString(value, "addTabHref(%", "%)");
+ * u=www.baidu.com
+ */
+
+function SS_getStringSummary(str, num){
+	var value = str;
+	if(str.length>num){
+		value = str.substring(0,num)+"...";
+	}
+	return value;
+}
 
 /**
  * 数字判断

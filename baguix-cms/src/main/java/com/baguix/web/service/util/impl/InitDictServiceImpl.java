@@ -563,6 +563,128 @@ public class InitDictServiceImpl implements InitServiceI {
         yiming.setRank(10);
         yiming.setCtime(new Date());
         dictItemDao.saveOrUpdate(yiming);
+
+        //试题标签
+        TDict tags = new TDict();
+        tags.setId("ExamTags");
+        tags.setName("ExamTags");
+        tags.setTitle("试题标签");
+        tags.setComment("试题搜索和组卷使用的标签项");
+        tags.setType("Tags");
+        tags.setCtime(new Date());
+        tags.setRank(30);
+        tags.setState(StateType.SHOW);
+        tags.setDictClass(bgDC);
+        dictDao.saveOrUpdate(tags);
+
+        TDictItem xuekao = new TDictItem();
+        xuekao.setDict(tags);
+        xuekao.setId("xuekao");
+        xuekao.setTitle("学考题");
+        xuekao.setValue("学考题");
+        xuekao.setRank(10);
+        xuekao.setCtime(new Date());
+        dictItemDao.saveOrUpdate(xuekao);
+
+        TDictItem moni = new TDictItem();
+        moni.setDict(tags);
+        moni.setId("moni");
+        moni.setTitle("模拟题");
+        moni.setValue("模拟题");
+        moni.setRank(20);
+        moni.setCtime(new Date());
+        dictItemDao.saveOrUpdate(moni);
+
+        TDictItem zhinan = new TDictItem();
+        zhinan.setDict(tags);
+        zhinan.setId("zhinan");
+        zhinan.setTitle("指南题");
+        zhinan.setValue("指南题");
+        zhinan.setRank(30);
+        zhinan.setCtime(new Date());
+        dictItemDao.saveOrUpdate(zhinan);
+
+        TDictItem lianxice = new TDictItem();
+        lianxice.setDict(tags);
+        lianxice.setId("lianxice");
+        lianxice.setTitle("练习册题");
+        lianxice.setValue("练习册题");
+        lianxice.setRank(40);
+        lianxice.setCtime(new Date());
+        dictItemDao.saveOrUpdate(lianxice);
+
+        TDictItem zizhu = new TDictItem();
+        zizhu.setDict(tags);
+        zizhu.setId("zizhu");
+        zizhu.setTitle("自主命题");
+        zizhu.setValue("自主命题");
+        zizhu.setDef(true);
+        zizhu.setRank(50);
+        zizhu.setCtime(new Date());
+        dictItemDao.saveOrUpdate(zizhu);
+
+        TDictItem chaogang = new TDictItem();
+        chaogang.setDict(tags);
+        chaogang.setId("chaogang");
+        chaogang.setTitle("超纲题");
+        chaogang.setValue("超纲题");
+        chaogang.setRank(60);
+        chaogang.setCtime(new Date());
+        dictItemDao.saveOrUpdate(chaogang);
+
+        TDictItem t2013 = new TDictItem();
+        t2013.setDict(tags);
+        t2013.setId("t2013");
+        t2013.setTitle("2013年");
+        t2013.setValue("2013年");
+        t2013.setRank(70);
+        t2013.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2013);
+
+        TDictItem t2014 = new TDictItem();
+        t2014.setDict(tags);
+        t2014.setId("t2014");
+        t2014.setTitle("2014年");
+        t2014.setValue("2014年");
+        t2014.setRank(80);
+        t2014.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2014);
+
+        TDictItem t2015 = new TDictItem();
+        t2015.setDict(tags);
+        t2015.setId("t2015");
+        t2015.setTitle("2015年");
+        t2015.setValue("2015年");
+        t2015.setRank(90);
+        t2015.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2015);
+
+        TDictItem t2016 = new TDictItem();
+        t2016.setDict(tags);
+        t2016.setId("t2016");
+        t2016.setTitle("2016年");
+        t2016.setValue("2016年");
+        t2016.setRank(100);
+        t2016.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2016);
+
+        TDictItem t2017 = new TDictItem();
+        t2017.setDict(tags);
+        t2017.setId("t2017");
+        t2017.setTitle("2017年");
+        t2017.setValue("2017年");
+        t2017.setRank(110);
+        t2017.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2017);
+
+        TDictItem t2018 = new TDictItem();
+        t2018.setDict(tags);
+        t2018.setId("t2018");
+        t2018.setTitle("2018年");
+        t2018.setValue("2018年");
+        t2018.setRank(120);
+        t2018.setCtime(new Date());
+        dictItemDao.saveOrUpdate(t2018);
     }
 
     /**

@@ -20,7 +20,7 @@ import java.util.UUID;
  */
 
 @Entity
-@Table(name = "SS_DICTCLASS", schema = "")
+@Table(name = "SS_CORE_DICTCLASS", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
 public class TDictClass implements Serializable {

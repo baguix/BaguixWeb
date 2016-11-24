@@ -22,7 +22,7 @@ import org.hibernate.annotations.*;
  */
 
 @Entity
-@Table(name = "SS_DICT", schema = "")
+@Table(name = "SS_CORE_DICT", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)

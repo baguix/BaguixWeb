@@ -33,8 +33,8 @@ public class SinglePageServiceImpl extends BaseServiceImpl<TSinglePage> implemen
 		TSinglePage t = new TSinglePage();
 		BeanUtils.copyProperties(art, t);
 		t.setId(UUID.randomUUID().toString());
-		t.setCtime(new Date());
-		t.setMtime(new Date());
+		t.getCommon().setCtime(new Date());
+		t.getCommon().setMtime(new Date());
 		dao.save(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent(null);
@@ -74,7 +74,7 @@ public class SinglePageServiceImpl extends BaseServiceImpl<TSinglePage> implemen
 	synchronized public Article edit(Article art) {
 		TSinglePage t = new TSinglePage();
 		BeanUtils.copyProperties(art, t);
-		t.setMtime(new Date());
+		t.getCommon().setMtime(new Date());
 		dao.saveOrUpdate(t);
 		BeanUtils.copyProperties(t, art);
 		art.setContent("");

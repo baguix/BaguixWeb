@@ -2,6 +2,7 @@ package com.baguix.web.action;
 
 import com.baguix.web.common.cache.SysData;
 import org.apache.commons.io.FileUtils;
+import org.apache.shiro.codec.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -136,5 +137,49 @@ public class TestAct {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    @RequestMapping("/mu")
+    public String mu(){
+        return "mu";
+    }
+
+    @RequestMapping("/mobileup")
+    @ResponseBody
+    public String mobileup(@RequestParam("image")String file){
+        String[] a = file.split(",");
+        String image = a[1];
+        GenerateImage(a[1]);
+        return image;
+    }
+    //base64字符串转化成图片
+    public static boolean GenerateImage(String imgStr)
+    {   //对字节数组字符串进行Base64解码并生成图片
+        if (imgStr == null) //图像数据为空
+            return false;
+        try
+        {
+            //Base64解码
+            byte[] b = Base64.decode(imgStr);
+            for(int i=0;i<b.length;++i)
+            {
+                if(b[i]<0)
+                {//调整异常数据
+                    b[i]+=256;
+                }
+            }
+            //生成jpeg图片
+            String imgFilePath = "d://222.jpg";//新生成的图片
+            OutputStream out = new FileOutputStream(imgFilePath);
+            out.write(b);
+            out.flush();
+            out.close();
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
     }
 }

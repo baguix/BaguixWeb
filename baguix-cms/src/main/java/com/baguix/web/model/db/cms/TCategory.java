@@ -20,7 +20,7 @@ import org.hibernate.annotations.Proxy;
 */
 
 @Entity
-@Table(name = "SS_CATEGORY", schema = "")
+@Table(name = "SS_CMS_CATEGORY", schema = "")
 //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 //@Proxy(lazy = false)
 @DynamicInsert(true)

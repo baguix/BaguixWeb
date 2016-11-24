@@ -5,12 +5,12 @@
 <h2>您好！</h2>
 
 <form action="captchatest.do" method="post">
-    <div class="chknumber">
+    <div class="chknumber" style="line-height: 32px;height: 30px;">
         <label>验证码：
             <input name="kaptcha" type="text" id="kaptcha" maxlength="4" class="chknumber_input"/>
         </label>
         <input type="submit" value="提交"/>
-        <img src="captcha.do" width="55" height="20" id="kaptchaImage" style="margin-bottom: -3px"/>
+        <img src="captcha.do" id="kaptchaImage" style="margin-bottom: -3px"/>
         <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript">
             $(function () {

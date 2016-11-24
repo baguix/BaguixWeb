@@ -4,6 +4,7 @@
     <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
     <!-- EasyUI -->
     <script type="text/javascript" src="${pageContext.request.contextPath}/jslib/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/jslib/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/jslib/easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript"
             src="${pageContext.request.contextPath}/jslib/easyui/locale/easyui-lang-zh_CN.js"></script>

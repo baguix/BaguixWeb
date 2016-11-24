@@ -5,6 +5,7 @@ import com.baguix.web.model.db.core.TDictItem;
 import com.baguix.web.model.easyui.TreeData;
 import com.baguix.web.model.page.core.DictItem;
 import com.baguix.web.service.core.DictItemServiceI;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sun.reflect.generics.tree.Tree;
@@ -135,6 +136,38 @@ public class DictionaryTemplate {
         code.append("$('#[$id$]').combotree('loadData',[$name$]_data);");
         code.append("var [$name$]_value = [$init$];");
         code.append("$('#[$id$]').combotree('setValue', [$name$]_value);");
+        code.append("</script>");
+        return code.toString();
+    }
+
+    // 类型：标签类型（如：男装×,女装×,童装×）
+    // 基于tag-editor(https://goodies.pixabay.com/jquery/tag-editor/demo.html)
+    public String getTagEditorCode(String dictId){
+        StringBuffer code = new StringBuffer();
+        code.append("<textarea type='text' id='[$id$]' name='[$name$]' class='tag-editor-hidden-src'></textarea>");
+        code.append("<br/>");
+        // 值的处理
+        List<DictItem> list = dictItemService.getTreeByLevel(dictId,null,1);
+        int i=0;
+        String initValue = "";
+        for(DictItem di : list){
+            i++;
+            if( StringUtils.isNotBlank(di.getDef()) && "true".equals(di.getDef().toLowerCase())){
+                initValue +=",'"+di.getTitle()+"'";
+            }
+            code.append("&nbsp;<a id='[$id$]_addTagBtn_"+i+"' href='javascript:addtag(\""+di.getTitle()+"\");' class='easyui-linkbutton'>"+di.getTitle()+"</a>&nbsp;");
+        }
+
+        initValue = "["+initValue.substring(1)+"]";
+
+        code.append("<script type='text/javascript'>");
+        code.append("[$name$]_value = [$init$]!='' ? [$init$].split(',') : "+initValue+";");
+        code.append("function addtag(text){$('#[$id$]').tagEditor('addTag', text);}\n");
+        code.append("$('#[$id$]').tagEditor({");
+        code.append("initialTags: [$name$]_value,");
+        code.append("delimiter: ', ',");
+        code.append("placeholder: '请输入标签 ...'");
+        code.append("}).css('display', 'block');");
         code.append("</script>");
         return code.toString();
     }
