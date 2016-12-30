@@ -137,6 +137,18 @@ public class ValueTool {
         return s == null ? "" : s;
     }
 
+    /**
+     * <b>字符串英文首字母大写</b>
+     * @param s 字符串
+     * @return String 首字母大写的字符串
+     */
+    public static String captureName(String s) {
+        char[] cs=s.toCharArray();
+        if(97<=cs[0] && cs[0]<=122){
+            cs[0]-=32;
+        }
+        return String.valueOf(cs);
+    }
 
     /**
      * <b>填充字符串的{}占位符</b><br>

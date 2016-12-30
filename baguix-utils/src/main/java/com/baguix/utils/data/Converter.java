@@ -88,4 +88,20 @@ public class Converter {
         }
         return file;
     }
+
+    /**
+     * <b>int[] 转为 字符串</b><br>
+     *     例如： {1,2,3,4,5} - "1,2,3,4,5"
+     * @param in 输入流
+     * @return String 以英文逗号隔开的字符串
+     */
+    public static String intArray2Str(int[] in){
+        StringBuilder sb = new StringBuilder();
+        sb.append(in[0]);
+        for(int i=1;i<in.length;i++){
+            sb.append(","+in[i]);
+        }
+        return sb.toString();
+    }
+
 }

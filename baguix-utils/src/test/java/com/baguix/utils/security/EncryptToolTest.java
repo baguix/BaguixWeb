@@ -107,4 +107,16 @@ public class EncryptToolTest {
         String str = EncryptTool.strongDecrypt(estr);
         assertEquals(str, "测试abc1234@#$%");
     }
+
+    /**
+     * Method: KSE(String str, int key) KSD(String str, int key)
+     */
+    @Test
+    public void testKS() throws Exception {
+        String str = "http://blog.sina.com.cn/s/blog_7a901a8701012xvt.html";
+        String estr = EncryptTool.KSE(str, 5);
+        assertEquals(estr, "ff7\"IjGhF0{G=I8G=0fhf7\"Ij>6{%s/{P6s/s/-`xYGyY8\"yYY$N");
+        String dstr = EncryptTool.KSD(estr, 5);
+        assertEquals(dstr, str);
+    }
 }

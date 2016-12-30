@@ -1,12 +1,15 @@
 package com.baguix.utils.security;
 
 import com.baguix.utils.data.Constants;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.jasypt.util.text.BasicTextEncryptor;
 import org.jasypt.util.text.StrongTextEncryptor;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Jasypt是个Java类包。
@@ -167,4 +170,84 @@ public class EncryptTool {
         return result;
     }
 
+    /**
+     * <b>凯撒字典加密（和KSD配套）</b><br>
+     * 注意：只支持英文符号
+     * @param str 要加密的字符串
+     * @param key 移位步长
+     * @return String加密后的字符串
+     *
+     */
+    public static String KSE(String str, int key) {
+        char a[] = Constants.a_b[0];
+        char b[] = Constants.a_b[1];
+        Map<String, String> map = new HashMap<String, String>();
+        for (int i = 0; i < a.length; i++) {
+            map.put(String.valueOf(a[i]), String.valueOf(b[i]));
+        }
+        char c[] = str.toCharArray();
+        int l = str.length();
+        StringBuilder sb = new StringBuilder();
+        if (key > l) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = 0; i < l; i++) {
+            String mapchar = map.get(String.valueOf(c[(i + key) % l]));
+            if (mapchar != null) {
+                sb.append(mapchar);
+            } else {
+                sb.append(c[(i + key) % l]);
+            }
+        }
+        return sb.toString();
+    }
+
+    /**
+     * <b>凯撒字典解密（和KSE配套）</b><br>
+     *
+     * @param str 要加密的字符串
+     * @param key 移位步长
+     * @return String加密后的字符串
+     *
+     */
+    public static String KSD(String str, int key) {
+        char a[] = Constants.a_b[0];
+        char b[] = Constants.a_b[1];
+        Map<String, String> map = new HashMap<String, String>();
+        for (int i = 0; i < a.length; i++) {
+            map.put(String.valueOf(b[i]), String.valueOf(a[i]));
+        }
+        char c[] = str.toCharArray();
+        int l = str.length();
+        StringBuilder sb = new StringBuilder();
+        if (key > l) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = 0; i < l; i++) {
+            String mapchar = map.get(String.valueOf(c[(i + l - key) % l]));
+            if (mapchar != null) {
+                sb.append(mapchar);
+            } else {
+                sb.append(c[(i + l - key) % l]);
+            }
+        }
+        return sb.toString();
+    }
+
+    /**
+     * <b>获取字符串的MD5校验码</b><br>
+     * 例如用于评论等内容防篡改
+     * @param str 字符串
+     * @return MD5校验码
+     */
+    public static String getMD5Hash(String str) {
+        try {
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            md5.update(str.getBytes());
+            return DigestUtils.md5Hex(md5.digest());
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

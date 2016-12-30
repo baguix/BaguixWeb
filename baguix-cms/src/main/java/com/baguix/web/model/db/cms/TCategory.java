@@ -242,8 +242,7 @@ public class TCategory implements Serializable{
         this.showmode=showmode;
     }
 	
-	@Lob
-    @Column(name = "CATEGORY_SHOWNUM")
+	@Column(name = "CATEGORY_SHOWNUM")
 	public void setShownum(int shownum) {
 		this.shownum = shownum;
 	}
